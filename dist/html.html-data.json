@@ -1,0 +1,1358 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "gr-button",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "caret",
+          "description": "Set to true to draw the button with a caret for use with dropdowns, popovers, etc."
+        },
+        {
+          "name": "circle",
+          "description": "Set to true to draw a circle button."
+        },
+        {
+          "name": "disabled",
+          "description": "If `true`, the user cannot interact with the button."
+        },
+        {
+          "name": "expand",
+          "description": "Set to `\"block\"` for a full-width button or to `\"full\"` for a full-width button\nwithout left and right borders.",
+          "values": [
+            {
+              "name": "block"
+            },
+            {
+              "name": "full"
+            }
+          ]
+        },
+        {
+          "name": "href",
+          "description": "Contains a URL or a URL fragment that the hyperlink points to."
+        },
+        {
+          "name": "loading",
+          "description": "Set to true to draw the button in a loading state."
+        },
+        {
+          "name": "pill",
+          "description": "Set to true to draw a pill-style button with rounded edges."
+        },
+        {
+          "name": "rel",
+          "description": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)."
+        },
+        {
+          "name": "size",
+          "description": "The button's size.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "description": "Specifies where to display the linked URL.\nSpecial keywords: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`."
+        },
+        {
+          "name": "type",
+          "description": "The type of the button.",
+          "values": [
+            {
+              "name": "button"
+            },
+            {
+              "name": "reset"
+            },
+            {
+              "name": "submit"
+            }
+          ]
+        },
+        {
+          "name": "variant",
+          "description": "The different variants.\nThe options are: `\"default\"`, `\"primary\"`, `\"secondary\"`, `\"danger\"`, and `\"plain\"`.",
+          "values": [
+            {
+              "name": "danger"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "plain"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "secondary"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/button/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-checkbox",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "alignment",
+          "description": "The checkbox's alignment.",
+          "values": [
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "top"
+            }
+          ]
+        },
+        {
+          "name": "checked",
+          "description": "Set to true to draw the checkbox in a checked state."
+        },
+        {
+          "name": "disabled",
+          "description": "Set to true to disable the checkbox."
+        },
+        {
+          "name": "indeterminate",
+          "description": "Set to true to draw the checkbox in an indeterminate state."
+        },
+        {
+          "name": "invalid",
+          "description": "Set to true to indicate this field is invalid. Will display the invalid text."
+        },
+        {
+          "name": "invalid-text",
+          "description": "The radio group's invalid text. Alternatively, you can use the invalid-text slot."
+        },
+        {
+          "name": "name",
+          "description": "The name of the control, which is submitted with the form data."
+        },
+        {
+          "name": "value",
+          "description": "The checkbox's value attribute."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/checkbox/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-date-picker",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "Forces the opening direction of the calendar modal to be always left or right.\nThis setting can be useful when the input is smaller than the opening date picker\nwould be as by default the picker always opens towards right.",
+          "values": [
+            {
+              "name": "left"
+            },
+            {
+              "name": "right"
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the date picker input component disabled. This prevents users from being able to\ninteract with the input, and conveys its inactive state to assistive technologies."
+        },
+        {
+          "name": "first-day-of-week",
+          "description": "Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\nDefault is Monday."
+        },
+        {
+          "name": "help-text",
+          "description": "The date picker's help text. Alternatively, you can use the help-text slot."
+        },
+        {
+          "name": "invalid",
+          "description": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text"
+        },
+        {
+          "name": "invalid-text",
+          "description": "The date picker's invalid text. Alternatively, you can use the invalid-text slot."
+        },
+        {
+          "name": "label",
+          "description": "The date picker's label. Alternatively, you can use the label slot."
+        },
+        {
+          "name": "max",
+          "description": "Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\nThis setting can be used alone or together with the min property."
+        },
+        {
+          "name": "min",
+          "description": "Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\nThis setting can be used alone or together with the max property."
+        },
+        {
+          "name": "name",
+          "description": "Name of the date picker input."
+        },
+        {
+          "name": "placeholder",
+          "description": "The date picker input's placeholder text."
+        },
+        {
+          "name": "required-indicator",
+          "description": "Set to true to display a required indicator, adds an asterisk to label"
+        },
+        {
+          "name": "value",
+          "description": "Date value. Must be in IS0-8601 format: YYYY-MM-DD."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/date-picker/date-picker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-dropdown",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "close-on-select",
+          "description": "Determines whether the dropdown should hide when a menu item is selected."
+        },
+        {
+          "name": "distance",
+          "description": "The distance in pixels from which to offset the panel away from its trigger."
+        },
+        {
+          "name": "hoist",
+          "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`."
+        },
+        {
+          "name": "open",
+          "description": "Indicates whether or not the dropdown is open. You can use this in lieu of the show/hide methods."
+        },
+        {
+          "name": "placement",
+          "description": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
+          "values": [
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "bottom-end"
+            },
+            {
+              "name": "bottom-start"
+            },
+            {
+              "name": "left"
+            },
+            {
+              "name": "left-end"
+            },
+            {
+              "name": "left-start"
+            },
+            {
+              "name": "right"
+            },
+            {
+              "name": "right-end"
+            },
+            {
+              "name": "right-start"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "top-end"
+            },
+            {
+              "name": "top-start"
+            }
+          ]
+        },
+        {
+          "name": "skidding",
+          "description": "The distance in pixels from which to offset the panel along its trigger."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/dropdown/dropdown.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-field-group",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "horizontal",
+          "description": "Render the fields horizontal instead of vertical"
+        },
+        {
+          "name": "label",
+          "description": "The field group label. Recommended for proper accessibility. Alternatively, you can use the label slot."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/field-group/field-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-input",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "autocapitalize",
+          "description": "Indicates whether and how the text value should be automatically capitalized as it is entered/edited by the user.\nAvailable options: `\"off\"`, `\"none\"`, `\"on\"`, `\"sentences\"`, `\"words\"`, `\"characters\"`."
+        },
+        {
+          "name": "autocomplete",
+          "description": "Indicates whether the value of the control can be automatically completed by the browser.",
+          "values": [
+            {
+              "name": "name"
+            },
+            {
+              "name": "on"
+            },
+            {
+              "name": "off"
+            },
+            {
+              "name": "honorific-prefix"
+            },
+            {
+              "name": "given-name"
+            },
+            {
+              "name": "additional-name"
+            },
+            {
+              "name": "family-name"
+            },
+            {
+              "name": "honorific-suffix"
+            },
+            {
+              "name": "nickname"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "username"
+            },
+            {
+              "name": "new-password"
+            },
+            {
+              "name": "current-password"
+            },
+            {
+              "name": "one-time-code"
+            },
+            {
+              "name": "organization-title"
+            },
+            {
+              "name": "organization"
+            },
+            {
+              "name": "street-address"
+            },
+            {
+              "name": "address-line1"
+            },
+            {
+              "name": "address-line2"
+            },
+            {
+              "name": "address-line3"
+            },
+            {
+              "name": "address-level4"
+            },
+            {
+              "name": "address-level3"
+            },
+            {
+              "name": "address-level2"
+            },
+            {
+              "name": "address-level1"
+            },
+            {
+              "name": "country"
+            },
+            {
+              "name": "country-name"
+            },
+            {
+              "name": "postal-code"
+            },
+            {
+              "name": "cc-name"
+            },
+            {
+              "name": "cc-given-name"
+            },
+            {
+              "name": "cc-additional-name"
+            },
+            {
+              "name": "cc-family-name"
+            },
+            {
+              "name": "cc-number"
+            },
+            {
+              "name": "cc-exp"
+            },
+            {
+              "name": "cc-exp-month"
+            },
+            {
+              "name": "cc-exp-year"
+            },
+            {
+              "name": "cc-csc"
+            },
+            {
+              "name": "cc-type"
+            },
+            {
+              "name": "transaction-currency"
+            },
+            {
+              "name": "transaction-amount"
+            },
+            {
+              "name": "language"
+            },
+            {
+              "name": "bday"
+            },
+            {
+              "name": "bday-day"
+            },
+            {
+              "name": "bday-month"
+            },
+            {
+              "name": "bday-year"
+            },
+            {
+              "name": "sex"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "tel-country-code"
+            },
+            {
+              "name": "tel-national"
+            },
+            {
+              "name": "tel-area-code"
+            },
+            {
+              "name": "tel-local"
+            },
+            {
+              "name": "tel-extension"
+            },
+            {
+              "name": "impp"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "photo"
+            }
+          ]
+        },
+        {
+          "name": "autocorrect",
+          "description": "Whether auto correction should be enabled when the user is entering/editing the text value.",
+          "values": [
+            {
+              "name": "off"
+            },
+            {
+              "name": "on"
+            }
+          ]
+        },
+        {
+          "name": "autofocus",
+          "description": "This Boolean attribute lets you specify that a form control should have input focus when the page loads."
+        },
+        {
+          "name": "clearable",
+          "description": "Set to true to add a clear button when the input is populated."
+        },
+        {
+          "name": "debounce",
+          "description": "Set the amount of time, in milliseconds, to wait to trigger the `gr-change` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`."
+        },
+        {
+          "name": "disabled",
+          "description": "Set to true to disable the input control."
+        },
+        {
+          "name": "enterkeyhint",
+          "description": "A hint to the browser for which enter key to display.\nPossible values: `\"enter\"`, `\"done\"`, `\"go\"`, `\"next\"`,\n`\"previous\"`, `\"search\"`, and `\"send\"`.",
+          "values": [
+            {
+              "name": "done"
+            },
+            {
+              "name": "enter"
+            },
+            {
+              "name": "go"
+            },
+            {
+              "name": "next"
+            },
+            {
+              "name": "previous"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "send"
+            }
+          ]
+        },
+        {
+          "name": "help-text",
+          "description": "The input's help text. Alternatively, you can use the help-text slot."
+        },
+        {
+          "name": "hide-appearance",
+          "description": "Set to true to hide input appearances."
+        },
+        {
+          "name": "inputmode",
+          "description": "The input's inputmode attribute.",
+          "values": [
+            {
+              "name": "decimal"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "none"
+            },
+            {
+              "name": "numeric"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "text"
+            },
+            {
+              "name": "url"
+            }
+          ]
+        },
+        {
+          "name": "invalid",
+          "description": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text"
+        },
+        {
+          "name": "invalid-text",
+          "description": "The input's invalid text. Alternatively, you can use the invalid-text slot."
+        },
+        {
+          "name": "label",
+          "description": "The inputs's label. Alternatively, you can use the label slot."
+        },
+        {
+          "name": "max",
+          "description": "The maximum value, which must not be less than its minimum (min attribute) value."
+        },
+        {
+          "name": "maxlength",
+          "description": "Specifies how many characters are allowed."
+        },
+        {
+          "name": "min",
+          "description": "The minimum value, which must not be greater than its maximum (max attribute) value."
+        },
+        {
+          "name": "name",
+          "description": "The input's name."
+        },
+        {
+          "name": "pattern",
+          "description": "Specifies a regular expression that the input value is checked against."
+        },
+        {
+          "name": "pill",
+          "description": "Set to true to draw a pill-style input with rounded edges."
+        },
+        {
+          "name": "placeholder",
+          "description": "The input's placeholder text."
+        },
+        {
+          "name": "readonly",
+          "description": "If `true`, the user cannot modify the value."
+        },
+        {
+          "name": "required-indicator",
+          "description": "Set to true to display a required indicator, adds an asterisk to label"
+        },
+        {
+          "name": "size",
+          "description": "The input's size.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "spellcheck",
+          "description": "If `true`, the element will have its spelling and grammar checked."
+        },
+        {
+          "name": "step",
+          "description": "Works with the min and max attributes to limit the increments at which a value can be set.\nPossible values are: `\"any\"` or a positive floating point number."
+        },
+        {
+          "name": "toggle-password",
+          "description": "Set to true to add a password toggle button for password inputs."
+        },
+        {
+          "name": "type",
+          "description": "The type of control to display. The default type is text.",
+          "values": [
+            {
+              "name": "date"
+            },
+            {
+              "name": "datetime-local"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "month"
+            },
+            {
+              "name": "number"
+            },
+            {
+              "name": "password"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "text"
+            },
+            {
+              "name": "time"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "week"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The input's value attribute."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/input/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-menu",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/menu/menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-menu-divider",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/menu-divider/menu-divider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-menu-item",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "Set to true to draw the item in a checked state."
+        },
+        {
+          "name": "disabled",
+          "description": "Set to true to draw the menu item in a disabled state."
+        },
+        {
+          "name": "value",
+          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/menu-item/menu-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-menu-label",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/menu-label/menu-label.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-radio",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "alignment",
+          "description": "The radio's alignment attribute.",
+          "values": [
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "top"
+            }
+          ]
+        },
+        {
+          "name": "checked",
+          "description": "Set to true to draw the radio in a checked state."
+        },
+        {
+          "name": "disabled",
+          "description": "Set to true to disable the radio."
+        },
+        {
+          "name": "value",
+          "description": "The radio's value attribute."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/radio/radio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-radio-group",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "allow-empty-selection",
+          "description": "If `true`, the radios can be deselected."
+        },
+        {
+          "name": "horizontal",
+          "description": "Render the radios horizontal instead of vertical"
+        },
+        {
+          "name": "invalid",
+          "description": "Set to true to indicate this field is invalid. Will display the invalid text."
+        },
+        {
+          "name": "invalid-text",
+          "description": "The radio group's invalid text. Alternatively, you can use the invalid-text slot."
+        },
+        {
+          "name": "label",
+          "description": "The radio group label. Required for proper accessibility. Alternatively, you can use the label slot."
+        },
+        {
+          "name": "name",
+          "description": "The name of the control, which is submitted with the form data."
+        },
+        {
+          "name": "required-indicator",
+          "description": "Set to true to display a required indicator, adds an asterisk to label"
+        },
+        {
+          "name": "value",
+          "description": "the value of the radio group."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/radio-group/radio-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-select",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "clearable",
+          "description": "Set to true to add a clear button when the select is populated."
+        },
+        {
+          "name": "disabled",
+          "description": "Set to true to disable the select control."
+        },
+        {
+          "name": "help-text",
+          "description": "The select's help text. Alternatively, you can use the help-text slot."
+        },
+        {
+          "name": "hoist",
+          "description": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`."
+        },
+        {
+          "name": "invalid",
+          "description": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text"
+        },
+        {
+          "name": "invalid-text",
+          "description": "The select's invalid text. Alternatively, you can use the invalid-text slot."
+        },
+        {
+          "name": "label",
+          "description": "The select's label. Alternatively, you can use the label slot."
+        },
+        {
+          "name": "max-tags-visible",
+          "description": "The maximum number of tags to show when `multiple` is true. After the maximum, \"+n\" will be shown to indicate the\nnumber of additional items that are selected. Set to -1 to remove the limit."
+        },
+        {
+          "name": "multiple",
+          "description": "Set to true to enable multiselect."
+        },
+        {
+          "name": "name",
+          "description": "The select's name."
+        },
+        {
+          "name": "pill",
+          "description": "Set to true to draw a pill-style select with rounded edges."
+        },
+        {
+          "name": "placeholder",
+          "description": "The select's placeholder text."
+        },
+        {
+          "name": "required-indicator",
+          "description": "Set to true to display a required indicator, adds an asterisk to label"
+        },
+        {
+          "name": "size",
+          "description": "The select's size.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The value of the control. This will be a string or an array depending on `multiple`."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/select/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-spinner",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/spinner/spinner.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-tab",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "active",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "description": "Set to true to draw the tab in a disabled state."
+        },
+        {
+          "name": "panel",
+          "description": "The name of the tab panel the tab will control. The panel must be located in the same tab group."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/tab/tab.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-tab-group",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "placement",
+          "description": "",
+          "values": [
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "start"
+            },
+            {
+              "name": "top"
+            }
+          ]
+        },
+        {
+          "name": "route-navigation",
+          "description": "Set to use a popstate eventlistner, to use route navigation."
+        },
+        {
+          "name": "tab-size",
+          "description": "The tab's size.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/tab-group/tab-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-tab-panel",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "active",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/tab-panel/tab-panel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-tag",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "clearable",
+          "description": "Set to true to make the tag clearable."
+        },
+        {
+          "name": "pill",
+          "description": "Set to true to draw a pill-style tag with rounded edges."
+        },
+        {
+          "name": "size",
+          "description": "The tag's size.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "title",
+          "description": "The tag's title."
+        },
+        {
+          "name": "truncate",
+          "description": "Set to true to make the tag truncated."
+        },
+        {
+          "name": "type",
+          "description": "The tag's type.",
+          "values": [
+            {
+              "name": "danger"
+            },
+            {
+              "name": "info"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "warning"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/tag/tag.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gr-textarea",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "autocapitalize",
+          "description": "Indicates whether and how the text value should be automatically capitalized as it is entered/edited by the user.\nAvailable options: `\"off\"`, `\"none\"`, `\"on\"`, `\"sentences\"`, `\"words\"`, `\"characters\"`."
+        },
+        {
+          "name": "autocorrect",
+          "description": "Whether auto correction should be enabled when the user is entering/editing the text value.",
+          "values": [
+            {
+              "name": "off"
+            },
+            {
+              "name": "on"
+            }
+          ]
+        },
+        {
+          "name": "autofocus",
+          "description": "This Boolean attribute lets you specify that a form control should have input focus when the page loads."
+        },
+        {
+          "name": "debounce",
+          "description": "Set the amount of time, in milliseconds, to wait to trigger the `gr-change` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`."
+        },
+        {
+          "name": "disabled",
+          "description": "Set to true to disable the textarea."
+        },
+        {
+          "name": "enterkeyhint",
+          "description": "A hint to the browser for which enter key to display.\nPossible values: `\"enter\"`, `\"done\"`, `\"go\"`, `\"next\"`,\n`\"previous\"`, `\"search\"`, and `\"send\"`.",
+          "values": [
+            {
+              "name": "done"
+            },
+            {
+              "name": "enter"
+            },
+            {
+              "name": "go"
+            },
+            {
+              "name": "next"
+            },
+            {
+              "name": "previous"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "send"
+            }
+          ]
+        },
+        {
+          "name": "help-text",
+          "description": "The textarea's help text. Alternatively, you can use the help-text slot."
+        },
+        {
+          "name": "inputmode",
+          "description": "The textarea's inputmode attribute.",
+          "values": [
+            {
+              "name": "decimal"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "none"
+            },
+            {
+              "name": "numeric"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "text"
+            },
+            {
+              "name": "url"
+            }
+          ]
+        },
+        {
+          "name": "invalid",
+          "description": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text"
+        },
+        {
+          "name": "invalid-text",
+          "description": "The input's invalid text. Alternatively, you can use the invalid-text slot."
+        },
+        {
+          "name": "label",
+          "description": "The textarea's label. Alternatively, you can use the label slot."
+        },
+        {
+          "name": "max-height",
+          "description": "The number of max rows"
+        },
+        {
+          "name": "maxlength",
+          "description": "Specifies how many characters are allowed."
+        },
+        {
+          "name": "name",
+          "description": "The textarea's name attribute."
+        },
+        {
+          "name": "placeholder",
+          "description": "The textarea's placeholder text."
+        },
+        {
+          "name": "readonly",
+          "description": "If `true`, the user cannot modify the value."
+        },
+        {
+          "name": "required-indicator",
+          "description": "Set to true to display a required indicator, adds an asterisk to label"
+        },
+        {
+          "name": "resize",
+          "description": "Controls how the textarea can be resized.",
+          "values": [
+            {
+              "name": "auto"
+            },
+            {
+              "name": "none"
+            },
+            {
+              "name": "vertical"
+            }
+          ]
+        },
+        {
+          "name": "rows",
+          "description": "The number of rows to display by default."
+        },
+        {
+          "name": "size",
+          "description": "The textarea's size.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "spellcheck",
+          "description": "If `true`, the element will have its spelling and grammar checked."
+        },
+        {
+          "name": "value",
+          "description": "The textarea's value attribute."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "./https:/github.com/paqtcom/graphite-design-system/tree/master/packages/core/src/components/textarea/textarea.tsx"
+        }
+      ]
+    }
+  ]
+}

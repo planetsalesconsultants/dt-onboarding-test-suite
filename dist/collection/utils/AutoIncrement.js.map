@@ -1,0 +1,1 @@
+{"version":3,"file":"AutoIncrement.js","sourceRoot":"","sources":["../../src/utils/AutoIncrement.ts"],"names":[],"mappings":"AAAA,IAAI,EAAE,GAAG,CAAC,CAAC;AAEX,MAAM,UAAU,aAAa;EAC3B,OAAO,EAAE,EAAE,CAAC;AACd,CAAC","sourcesContent":["let id = 0;\n\nexport function autoIncrement(): number {\n  return ++id;\n}\n"]}

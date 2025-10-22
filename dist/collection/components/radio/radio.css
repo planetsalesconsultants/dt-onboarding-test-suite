@@ -1,0 +1,160 @@
+.gr-scroll-lock {
+  overflow: hidden !important;
+}
+
+:host {
+  /**
+   * @prop --label-color: Color of the label
+   *
+   * @prop --control-size: Size of the control
+   *
+   * @prop --control-border-color: Border color of the control
+   * @prop --control-background-color: Background color of the control
+   *
+   * @prop --control-border-color-hover: Border color of the control on hover
+   * @prop --control-background-color-hover: Background color of the control on hover
+   *
+   * @prop --control-border-color-focus: Border color of the control on focus
+   * @prop --control-background-color-focus: Background color of the control on focus
+   *
+   * @prop --control-color-checked: Color of the control when checked (the small circle)
+   * @prop --control-border-color-checked: Border color of the control when checked
+   * @prop --control-background-color-checked: Background color of the control when checked
+   *
+   * @prop --control-border-color-checked-hover: Border color of the control when checked on hover
+   * @prop --control-background-color-checked-hover: Background color of the control when checked on hover
+   *
+   * @prop --control-border-color-checked-focus: Border color of the control when checked on focus
+   * @prop --control-background-color-checked-focus: Background color of the control when checked on focus
+   */
+  --label-color: var(--gr-color-dark-tint);
+  --label-margin-top-adjustment: -7px;
+  --label-margin-bottom-adjustment: -4px;
+  --control-size: var(--gr-toggle-size);
+  --control-border-color: var(--gr-color-light-shade);
+  --control-background-color: var(--gr-color-white);
+  --control-border-color-hover: var(--gr-color-medium);
+  --control-background-color-hover: var(--gr-color-white);
+  --control-border-color-focus: var(--gr-color-medium);
+  --control-background-color-focus: var(--gr-color-medium);
+  --control-color-checked: var(--gr-color-white);
+  --control-border-color-checked: var(--gr-color-primary);
+  --control-background-color-checked: var(--gr-color-primary);
+  --control-border-color-checked-hover: var(--gr-color-primary-shade);
+  --control-background-color-checked-hover: var(--gr-color-primary-shade);
+  --control-border-color-checked-focus: var(--gr-color-primary-shade);
+  --control-background-color-checked-focus: var(--gr-color-primary-shade);
+  --focus-ring: 0 0 0 var(--gr-focus-ring-width) rgb(var(--gr-color-primary-rgb), 0.33);
+  display: inline-block;
+  box-sizing: border-box;
+}
+:host *, :host *:before, :host *:after {
+  box-sizing: inherit;
+}
+
+:host(.radio-disabled) {
+  pointer-events: none;
+}
+
+.radio-top {
+  align-items: flex-start;
+}
+
+.radio-center {
+  align-items: center;
+}
+
+.radio-bottom {
+  align-items: flex-end;
+}
+
+.radio {
+  display: inline-flex;
+  font-family: var(--gr-font-family);
+  font-size: var(--gr-form-element-font-size-medium);
+  font-weight: var(--gr-font-weight-normal);
+  color: var(--label-color);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radio-icon {
+  display: inline-flex;
+  width: var(--control-size);
+  height: var(--control-size);
+}
+.radio-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.radio-control {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-size);
+  height: var(--control-size);
+  border: solid 1px var(--control-border-color);
+  border-radius: 50%;
+  background-color: var(--control-background-color);
+  color: transparent;
+  transition: 150ms border-color, 150ms background-color, 150ms color, 150ms box-shadow;
+}
+.radio-control input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.radio:not(.radio-checked):not(.radio-disabled) .radio-control:hover {
+  border-color: var(--control-border-color-hover);
+  background-color: var(--control-background-color-hover);
+}
+
+.radio.radio-focused:not(.radio-checked):not(.radio-disabled) .radio-control {
+  border-color: var(--control-border-color-hover);
+  background-color: var(--control-background-color-hover);
+  box-shadow: var(--focus-ring);
+}
+
+.radio-checked .radio-control {
+  color: var(--control-color-checked);
+  border-color: var(--control-border-color-checked);
+  background-color: var(--control-background-color-checked);
+}
+
+.radio.radio-checked:not(.radio-disabled) .radio-control:hover {
+  border-color: var(--control-border-color-checked-hover);
+  background-color: var(--control-background-color-checked-hover);
+}
+
+.radio.radio-checked:not(.radio-disabled).radio-focused .radio-control {
+  border-color: var(--control-border-color-checked-focus);
+  background-color: var(--control-background-color-checked-focus);
+  box-shadow: var(--focus-ring);
+}
+
+.radio-disabled {
+  opacity: 0.5;
+}
+
+.radio-label {
+  line-height: var(--gr-line-height-normal);
+  margin-left: 0.5em;
+  user-select: none;
+}
+
+.radio-top .radio-label {
+  margin-top: var(--label-margin-top-adjustment);
+}
+
+.radio-bottom .radio-label {
+  margin-bottom: var(--label-margin-bottom-adjustment);
+}
+
+:host(:focus) {
+  outline: none;
+}

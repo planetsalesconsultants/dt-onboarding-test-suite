@@ -1,0 +1,5 @@
+/*!
+ * (C) PAQT.com B.V. https://paqt.com - MIT License
+ */
+function t(t,o){return{top:Math.round(t.getBoundingClientRect().top-o.getBoundingClientRect().top),left:Math.round(t.getBoundingClientRect().left-o.getBoundingClientRect().left)}}function o(o,e,i="vertical",n="smooth"){const s=t(o,e);const c=s.top+e.scrollTop;const f=s.left+e.scrollLeft;const a=e.scrollLeft;const h=e.scrollLeft+e.offsetWidth;const r=e.scrollTop;const l=e.scrollTop+e.offsetHeight;if(i==="horizontal"||i==="both"){if(f<a){e.scrollTo({left:f,behavior:n})}else if(f+o.clientWidth>h){e.scrollTo({left:f-e.offsetWidth+o.clientWidth,behavior:n})}}if(i==="vertical"||i==="both"){if(c<r){e.scrollTo({top:c,behavior:n})}else if(c+o.clientHeight>l){e.scrollTo({top:c-e.offsetHeight+o.clientHeight,behavior:n})}}}export{o as s};
+//# sourceMappingURL=p-6e3c7be8.js.map

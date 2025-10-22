@@ -1,0 +1,1 @@
+{"file":"app-globals-b8be34d3.js","mappings":";;;;;;;AACY,MAAC,aAAa,GAAGA;;;;","names":["appGlobalScript"],"sources":["@stencil/core/internal/app-globals"],"sourcesContent":["import appGlobalScript from '/Users/tomstemerding/projects/graphite-design-system/packages/core/src/global/graphite-global.ts';\nexport const globalScripts = appGlobalScript;\n"],"version":3}

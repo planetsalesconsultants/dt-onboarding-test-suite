@@ -1,0 +1,90 @@
+{
+  "entries": [
+    "./components/button/button.js",
+    "./components/checkbox/checkbox.js",
+    "./components/date-picker/date-picker.js",
+    "./components/dropdown/dropdown.js",
+    "./components/field-group/field-group.js",
+    "./components/input/input.js",
+    "./components/menu/menu.js",
+    "./components/menu-divider/menu-divider.js",
+    "./components/menu-item/menu-item.js",
+    "./components/menu-label/menu-label.js",
+    "./components/radio/radio.js",
+    "./components/radio-group/radio-group.js",
+    "./components/select/select.js",
+    "./components/spinner/spinner.js",
+    "./components/tab/tab.js",
+    "./components/tab-group/tab-group.js",
+    "./components/tab-panel/tab-panel.js",
+    "./components/tag/tag.js",
+    "./components/textarea/textarea.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.20.0",
+    "typescriptVersion": "4.8.4"
+  },
+  "collections": [
+    {
+      "name": "@duetds/date-picker",
+      "tags": [
+        "duet-date-picker"
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "components": [
+        "gr-input"
+      ]
+    },
+    {
+      "components": [
+        "gr-textarea"
+      ]
+    },
+    {
+      "components": [
+        "gr-date-picker"
+      ]
+    },
+    {
+      "components": [
+        "gr-button",
+        "gr-spinner"
+      ]
+    },
+    {
+      "components": [
+        "gr-checkbox",
+        "gr-field-group"
+      ]
+    },
+    {
+      "components": [
+        "gr-radio",
+        "gr-radio-group"
+      ]
+    },
+    {
+      "components": [
+        "gr-tab",
+        "gr-tab-group",
+        "gr-tab-panel"
+      ]
+    },
+    {
+      "components": [
+        "gr-dropdown",
+        "gr-menu",
+        "gr-menu-divider",
+        "gr-menu-item",
+        "gr-menu-label",
+        "gr-select",
+        "gr-tag"
+      ]
+    }
+  ],
+  "global": "./global/graphite-global.js"
+}

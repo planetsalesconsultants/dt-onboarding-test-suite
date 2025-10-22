@@ -1,0 +1,1 @@
+{"version":3,"file":"HTMLElementSSR.js","sourceRoot":"","sources":["../../src/utils/HTMLElementSSR.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,cAAc,GAAG,CAAC,OAAO,WAAW,KAAK,WAAW,CAAC,CAAC,CAAC,WAAW,CAAC,CAAC,CAAC;CAAQ,CAAuB,CAAC","sourcesContent":["export const HTMLElementSSR = (typeof HTMLElement !== 'undefined' ? HTMLElement : class {}) as typeof HTMLElement;\n"]}

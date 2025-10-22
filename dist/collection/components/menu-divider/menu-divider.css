@@ -1,0 +1,28 @@
+.gr-scroll-lock {
+  overflow: hidden !important;
+}
+
+:host {
+  /**
+   * @prop --margin-top: Top margin of the menu item divider
+   * @prop --margin-bottom: Bottom margin of the menu item divider
+   *
+   * @prop --border-color: Border color of the menu item divider
+   */
+  --margin-top: var(--gr-spacing-x-small);
+  --margin-bottom: var(--gr-spacing-x-small);
+  --border-color: var(--gr-panel-border-color);
+  display: block;
+  box-sizing: border-box;
+}
+:host *, :host *:before, :host *:after {
+  box-sizing: inherit;
+}
+
+.menu-divider {
+  border-top: solid 1px var(--border-color);
+  margin-top: var(--margin-top);
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: var(--margin-bottom);
+}

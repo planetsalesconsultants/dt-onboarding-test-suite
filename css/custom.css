@@ -1,0 +1,89 @@
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      color: #333;
+    }
+    p {
+      max-width: 800px;
+      margin: 0.5em;
+    }
+    #logo {
+        width: 70px;
+    }
+    gr-input, gr-button {
+        display: block;
+        margin-bottom: 16px;
+        max-width: 400px;
+      }
+      gr-input, gr-button {
+        display: block;
+        margin-bottom: 16px;
+      }
+    .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 4px;
+        margin-bottom: 20px;
+      }
+    #loadingLayer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1.5em;
+    }
+    #loading {
+      width: 800px;
+      padding: 20px;
+      text-align: center;
+    }
+    #errorLayer {
+      color: red; 
+      width: 800px;
+      background: #fee; 
+      padding: 1em; 
+      border: 1px solid red; 
+      margin-top: 1em;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 0.5em;
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px solid #ddd;
+    }
+    form {
+      padding: 10px;
+    }
+    .table {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 10px;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+    .row {
+      display: contents;
+    }
+    .label {
+      font-weight: bold;
+      background-color: #f2f2f2;
+      padding: 8px;
+    }
+    .value {
+      padding: 8px;
+      background-color: #fafafa;
+    }    

@@ -1,0 +1,242 @@
+.form-control .form-control-label {
+  display: none;
+}
+.form-control .form-control-help-text {
+  display: none;
+}
+.form-control .form-control-invalid-text {
+  display: none;
+}
+
+.form-control-has-label .form-control-label {
+  display: flex;
+  line-height: var(--gr-line-height-normal);
+  color: var(--gr-form-element-label-color);
+  margin-bottom: var(--gr-spacing-xxx-small);
+}
+.form-control-has-label.form-control-small .form-control-label {
+  font-size: var(--gr-form-element-label-font-size-small);
+}
+.form-control-has-label.form-control-medium .form-control-label {
+  font-size: var(--gr-form-element-label-font-size-medium);
+}
+.form-control-has-label.form-control-large .form-control-label {
+  font-size: var(--gr-form-element-label-font-size-large);
+}
+.form-control-has-label .form-control-label .asterisk {
+  margin-left: var(--gr-spacing-x-small);
+  color: var(--gr-color-medium);
+}
+.form-control-has-label .form-control-label .asterisk svg {
+  width: 0.6em;
+  height: 0.6em;
+  margin-bottom: var(--gr-spacing-xxx-small);
+}
+
+.form-control-has-help-text .form-control-help-text {
+  display: block;
+  line-height: var(--gr-line-height-normal);
+  color: var(--gr-form-element-help-text-color);
+  margin-top: var(--gr-spacing-xxx-small);
+}
+.form-control-has-help-text.form-control-small .form-control-help-text {
+  font-size: var(--gr-form-element-help-text-font-size-small);
+  min-height: 1.625rem;
+}
+.form-control-has-help-text.form-control-medium .form-control-help-text {
+  font-size: var(--gr-form-element-help-text-font-size-medium);
+  min-height: 1.875rem;
+}
+.form-control-has-help-text.form-control-large .form-control-help-text {
+  font-size: var(--gr-form-element-help-text-font-size-large);
+  min-height: 2.125rem;
+}
+
+.form-control-has-invalid-text .form-control-invalid-text {
+  display: flex;
+  margin-left: -2px;
+  line-height: var(--gr-line-height-normal);
+  color: var(--gr-form-element-invalid-text-color);
+  margin-top: var(--gr-spacing-xxx-small);
+}
+.form-control-has-invalid-text .form-control-invalid-text .icon {
+  margin-top: var(--gr-spacing-xxx-small);
+  margin-right: var(--gr-spacing-xx-small);
+}
+.form-control-has-invalid-text .form-control-invalid-text .icon svg {
+  width: 1.4em;
+  height: 1.4em;
+}
+.form-control-has-invalid-text.form-control-small .form-control-invalid-text {
+  font-size: var(--gr-form-element-invalid-text-font-size-small);
+  min-height: 1.625rem;
+}
+.form-control-has-invalid-text.form-control-medium .form-control-invalid-text {
+  font-size: var(--gr-form-element-invalid-text-font-size-medium);
+  min-height: 1.875rem;
+}
+.form-control-has-invalid-text.form-control-large .form-control-invalid-text {
+  font-size: var(--gr-form-element-invalid-text-font-size-large);
+  min-height: 2.125rem;
+}
+
+.gr-scroll-lock {
+  overflow: hidden !important;
+}
+
+:host {
+  /**
+   * @prop --font-size: Font size of the textarea
+   * @prop --font-weight: Font weight of the textarea
+   *
+   * @prop --background-color: Background color of the textarea
+   * @prop --background-color-hover: Background color of the textarea on hover
+   * @prop --background-color-focus: Background color of the textarea on focus
+   * @prop --background-color-invalid: Background color of the textarea when invalid
+   * @prop --background-color-invalid-hover: Background color of the textarea when invalid on focus
+   *
+   * @prop --border-radius: Border radius of the textarea
+   * @prop --border-color: Border color of the textarea
+   * @prop --border-color-hover: Border color of the textarea on hover
+   * @prop --border-color-focus: Border color of the textarea on focus
+   * @prop --border-color-invalid: Border color of the textarea when invalid
+   * @prop --border-color-invalid-hover: Border color of the textarea when invalid on focus
+   *
+   * @prop --color: Text color of the textarea
+   *
+   * @prop --placeholder-color: Text color of the placeholder
+   *
+   * @prop --min-height: Minimum height of the textarea
+   *
+   * @prop --padding-start: Left padding of the textarea (will be right padding when we support right-to-left direction)
+   * @prop --padding-end: Right padding of the textarea (will be left padding when we support right-to-left direction)
+   *
+   * @prop --focus-ring: The focus ring style to use when the textarea receives focus, a `box-shadow` property.
+   */
+  --font-size: var(--gr-form-element-font-size-medium);
+  --font-weight: var(--gr-font-weight-normal);
+  --background-color: var(--gr-color-white);
+  --background-color-hover: var(--gr-color-white);
+  --background-color-focus: var(--gr-color-white);
+  --background-color-invalid: var(--gr-color-white);
+  --background-color-invalid-hover: var(--gr-color-white);
+  --border-radius: var(--gr-form-element-border-radius-small);
+  --border-color: var(--gr-color-light-shade);
+  --border-color-hover: var(--gr-color-medium);
+  --border-color-focus: var(--gr-color-primary);
+  --border-color-invalid: var(--gr-color-danger);
+  --border-color-invalid-hover: var(--gr-color-danger-shade);
+  --color: var(--gr-color-dark-tint);
+  --placeholder-color: var(--gr-color-medium-tint);
+  --min-height: var(--gr-form-element-height-medium);
+  --padding-start: var(--gr-spacing-medium);
+  --padding-end: var(--gr-spacing-medium);
+  --padding-top: var(--gr-spacing-x-small);
+  --padding-bottom: var(--gr-spacing-x-small);
+  --focus-ring: 0 0 0 var(--gr-focus-ring-width) rgb(var(--gr-color-primary-rgb), 0.33);
+  display: block;
+  box-sizing: border-box;
+}
+:host *, :host *:before, :host *:after {
+  box-sizing: inherit;
+}
+
+.textarea-small {
+  --font-size: var(--gr-form-element-font-size-small);
+  --min-height: var(--gr-form-element-height-small);
+  --padding-start: var(--gr-spacing-small);
+  --padding-end: var(--gr-spacing-small);
+}
+
+.textarea-large {
+  --font-size: var(--gr-form-element-font-size-large);
+  --min-height: var(--gr-form-element-height-large);
+  --padding-start: var(--gr-spacing-large);
+  --padding-end: var(--gr-spacing-large);
+}
+
+.textarea {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  font-family: var(--gr-font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--gr-line-height-normal);
+  letter-spacing: var(--gr-letter-spacing-normal);
+  background-color: var(--background-color);
+  border: solid 1px var(--border-color);
+  border-radius: var(--border-radius);
+  vertical-align: middle;
+  transition: 150ms color, 150ms border, 150ms box-shadow;
+  cursor: text;
+}
+.textarea.textarea-invalid:not(.textarea-disabled) {
+  background-color: var(--background-color-invalid);
+  border-color: var(--border-color-invalid);
+}
+.textarea:hover.textarea-invalid:not(.textarea-disabled):not(.textarea-focused) {
+  background-color: var(--background-color-invalid-hover);
+  border-color: var(--border-color-invalid-hover);
+}
+.textarea.textarea-invalid:not(.textarea-disabled) {
+  background-color: var(--background-color-invalid);
+  border-color: var(--border-color-invalid);
+}
+.textarea:hover:not(.textarea-disabled) {
+  background-color: var(--background-color-hover);
+  border-color: var(--border-color-hover);
+}
+.textarea.textarea-focused:not(.textarea-disabled) {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-color: var(--border-color-focus);
+  background-color: var(--background-color-focus);
+}
+.textarea.textarea-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  outline: none;
+}
+
+.textarea-control {
+  flex: 1 1 auto;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.4;
+  color: var(--gr-color-dark-tint);
+  border: none;
+  background: none;
+  box-shadow: none;
+  cursor: inherit;
+  -webkit-appearance: none;
+  padding-top: var(--padding-top);
+  padding-left: var(--padding-start);
+  padding-right: var(--padding-end);
+  padding-bottom: var(--padding-bottom);
+}
+.textarea-control::-webkit-search-decoration, .textarea-control::-webkit-search-cancel-button, .textarea-control::-webkit-search-results-button, .textarea-control::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+.textarea-control::placeholder {
+  color: var(--gr-color-medium-tint);
+  user-select: none;
+}
+.textarea-control:focus {
+  outline: none;
+}
+
+.textarea-resize-none .textarea-control {
+  resize: none;
+}
+
+.textarea-resize-vertical .textarea-control {
+  resize: vertical;
+}
+
+.textarea-resize-auto .textarea-control {
+  height: auto;
+  resize: none;
+}

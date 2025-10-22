@@ -1,0 +1,25 @@
+.gr-scroll-lock {
+  overflow: hidden !important;
+}
+
+:host {
+  /**
+   * @prop --padding-top: Top padding of the menu
+   * @prop --padding-bottom: Bottom padding of the menu
+   */
+  --padding-top: var(--gr-spacing-x-small);
+  --padding-bottom: var(--gr-spacing-x-small);
+  display: block;
+  padding-top: var(--padding-top);
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: var(--padding-bottom);
+  box-sizing: border-box;
+}
+:host *, :host *:before, :host *:after {
+  box-sizing: inherit;
+}
+
+:host:focus {
+  outline: none;
+}

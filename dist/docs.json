@@ -1,0 +1,5295 @@
+{
+  "timestamp": "2025-03-24T10:27:58",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.20.0",
+    "typescriptVersion": "4.8.4"
+  },
+  "components": [
+    {
+      "filePath": "./src/components/button/button.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-button",
+      "readme": "# gr-button\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- Content is placed between the named slots if provided without a slot."
+        },
+        {
+          "name": "slot",
+          "text": "icon-only - Should be used on an icon in a button that has no text."
+        },
+        {
+          "name": "slot",
+          "text": "start - Content is placed to the left of the button text (will be to the right when we support right-to-left direction)"
+        },
+        {
+          "name": "slot",
+          "text": "end - Content is placed to the right of the button text (will be to the left when we support right-to-left direction)"
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "caret",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "caret",
+          "reflectToAttr": false,
+          "docs": "Set to true to draw the button with a caret for use with dropdowns, popovers, etc.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "circle",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "circle",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw a circle button.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "If `true`, the user cannot interact with the button.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "expand",
+          "type": "\"block\" | \"full\"",
+          "mutable": false,
+          "attr": "expand",
+          "reflectToAttr": true,
+          "docs": "Set to `\"block\"` for a full-width button or to `\"full\"` for a full-width button\nwithout left and right borders.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "block",
+              "type": "string"
+            },
+            {
+              "value": "full",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "mutable": false,
+          "attr": "href",
+          "reflectToAttr": false,
+          "docs": "Contains a URL or a URL fragment that the hyperlink points to.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "loading",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw the button in a loading state.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "pill",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "pill",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw a pill-style button with rounded edges.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "rel",
+          "type": "string",
+          "mutable": false,
+          "attr": "rel",
+          "reflectToAttr": false,
+          "docs": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"medium\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "The button's size.",
+          "docsTags": [],
+          "default": "'medium'",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "medium",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "mutable": false,
+          "attr": "target",
+          "reflectToAttr": false,
+          "docs": "Specifies where to display the linked URL.\nSpecial keywords: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "\"button\" | \"reset\" | \"submit\"",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "The type of the button.",
+          "docsTags": [],
+          "default": "'button'",
+          "values": [
+            {
+              "value": "button",
+              "type": "string"
+            },
+            {
+              "value": "reset",
+              "type": "string"
+            },
+            {
+              "value": "submit",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "\"danger\" | \"default\" | \"plain\" | \"primary\" | \"secondary\"",
+          "mutable": false,
+          "attr": "variant",
+          "reflectToAttr": true,
+          "docs": "The different variants.\nThe options are: `\"default\"`, `\"primary\"`, `\"secondary\"`, `\"danger\"`, and `\"plain\"`.",
+          "docsTags": [],
+          "default": "'default'",
+          "values": [
+            {
+              "value": "danger",
+              "type": "string"
+            },
+            {
+              "value": "default",
+              "type": "string"
+            },
+            {
+              "value": "plain",
+              "type": "string"
+            },
+            {
+              "value": "primary",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes focus from the button.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus(options?: FocusOptions) => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the button.",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the button loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the button has focus.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--background",
+          "annotation": "prop",
+          "docs": "Background of the button"
+        },
+        {
+          "name": "--background-focus",
+          "annotation": "prop",
+          "docs": "Background of the button on focus"
+        },
+        {
+          "name": "--background-hover",
+          "annotation": "prop",
+          "docs": "Background of the button on hover"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of the button"
+        },
+        {
+          "name": "--border-color-focus",
+          "annotation": "prop",
+          "docs": "Border color of the button on focus"
+        },
+        {
+          "name": "--border-color-hover",
+          "annotation": "prop",
+          "docs": "Border color of the button on hover"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of the button"
+        },
+        {
+          "name": "--border-style",
+          "annotation": "prop",
+          "docs": "Border style of the button"
+        },
+        {
+          "name": "--border-width",
+          "annotation": "prop",
+          "docs": "Border width of the button"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Text color of the button"
+        },
+        {
+          "name": "--color-focus",
+          "annotation": "prop",
+          "docs": "Text color of the button on focus"
+        },
+        {
+          "name": "--color-hover",
+          "annotation": "prop",
+          "docs": "Text color of the button on hover"
+        },
+        {
+          "name": "--focus-ring",
+          "annotation": "prop",
+          "docs": "The focus ring style to use when the button receives focus, a `box-shadow` property."
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of the button"
+        },
+        {
+          "name": "--padding-bottom",
+          "annotation": "prop",
+          "docs": "Bottom padding of the button"
+        },
+        {
+          "name": "--padding-end",
+          "annotation": "prop",
+          "docs": "Right padding of the button (will be left padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-start",
+          "annotation": "prop",
+          "docs": "Left padding of the button (will be right padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-top",
+          "annotation": "prop",
+          "docs": "Top padding of the button"
+        },
+        {
+          "name": "--shadow",
+          "annotation": "prop",
+          "docs": "Shadow of the button, a `box-shadow` property. Please note this will be overwritted by `--focus-ring` on focus."
+        },
+        {
+          "name": "--transition",
+          "annotation": "prop",
+          "docs": "Transition of the button"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "Content is placed between the named slots if provided without a slot."
+        },
+        {
+          "name": "end",
+          "docs": "Content is placed to the right of the button text (will be to the left when we support right-to-left direction)"
+        },
+        {
+          "name": "icon-only",
+          "docs": "Should be used on an icon in a button that has no text."
+        },
+        {
+          "name": "start",
+          "docs": "Content is placed to the left of the button text (will be to the right when we support right-to-left direction)"
+        }
+      ],
+      "parts": [],
+      "dependents": [
+        "gr-tag"
+      ],
+      "dependencies": [
+        "gr-spinner"
+      ],
+      "dependencyGraph": {
+        "gr-button": [
+          "gr-spinner"
+        ],
+        "gr-tag": [
+          "gr-button"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/checkbox/checkbox.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-checkbox",
+      "readme": "# gr-button\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The checkboxes label."
+        },
+        {
+          "name": "slot",
+          "text": "invalid-text - Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "alignment",
+          "type": "\"bottom\" | \"center\" | \"top\"",
+          "mutable": false,
+          "attr": "alignment",
+          "reflectToAttr": true,
+          "docs": "The checkbox's alignment.",
+          "docsTags": [],
+          "default": "'center'",
+          "values": [
+            {
+              "value": "bottom",
+              "type": "string"
+            },
+            {
+              "value": "center",
+              "type": "string"
+            },
+            {
+              "value": "top",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "checked",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw the checkbox in a checked state.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "Set to true to disable the checkbox.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "indeterminate",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "indeterminate",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw the checkbox in an indeterminate state.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "invalid",
+          "reflectToAttr": true,
+          "docs": "Set to true to indicate this field is invalid. Will display the invalid text.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalidText",
+          "type": "string",
+          "mutable": false,
+          "attr": "invalid-text",
+          "reflectToAttr": false,
+          "docs": "The radio group's invalid text. Alternatively, you can use the invalid-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "The name of the control, which is submitted with the form data.",
+          "docsTags": [],
+          "default": "this.inputId",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "The checkbox's value attribute.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes focus from the checkbox.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus(options?: FocusOptions) => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the checkbox.",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-change",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control's checked state changes.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control gains focus.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--control-background-color",
+          "annotation": "prop",
+          "docs": "Background color of the control"
+        },
+        {
+          "name": "--control-background-color-checked",
+          "annotation": "prop",
+          "docs": "Background color of the control when checked"
+        },
+        {
+          "name": "--control-background-color-checked-focus",
+          "annotation": "prop",
+          "docs": "Background color of the control when checked on focus"
+        },
+        {
+          "name": "--control-background-color-checked-hover",
+          "annotation": "prop",
+          "docs": "Background color of the control when checked on hover"
+        },
+        {
+          "name": "--control-background-color-hover",
+          "annotation": "prop",
+          "docs": "Background color of the control on hover"
+        },
+        {
+          "name": "--control-border-color",
+          "annotation": "prop",
+          "docs": "Border color of the control"
+        },
+        {
+          "name": "--control-border-color-checked",
+          "annotation": "prop",
+          "docs": "Border color of the control when checked"
+        },
+        {
+          "name": "--control-border-color-checked-focus",
+          "annotation": "prop",
+          "docs": "Border color of the control when checked on focus"
+        },
+        {
+          "name": "--control-border-color-checked-hover",
+          "annotation": "prop",
+          "docs": "Border color of the control when checked on hover"
+        },
+        {
+          "name": "--control-border-color-hover",
+          "annotation": "prop",
+          "docs": "Border color of the control on hover"
+        },
+        {
+          "name": "--control-color-checked",
+          "annotation": "prop",
+          "docs": "Color of the control when checked (the checkmark icon)"
+        },
+        {
+          "name": "--control-size",
+          "annotation": "prop",
+          "docs": "Size of the control"
+        },
+        {
+          "name": "--focus-ring",
+          "annotation": "prop",
+          "docs": "The focus ring style to use when the checkbox receives focus, a `box-shadow` property."
+        },
+        {
+          "name": "--label-color",
+          "annotation": "prop",
+          "docs": "Color of the label"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The checkboxes label."
+        },
+        {
+          "name": "invalid-text",
+          "docs": "Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/date-picker/date-picker.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-date-picker",
+      "readme": "# gr-date-picker\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "direction",
+          "type": "\"left\" | \"right\"",
+          "mutable": false,
+          "attr": "direction",
+          "reflectToAttr": false,
+          "docs": "Forces the opening direction of the calendar modal to be always left or right.\nThis setting can be useful when the input is smaller than the opening date picker\nwould be as by default the picker always opens towards right.",
+          "docsTags": [],
+          "default": "'right'",
+          "values": [
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "Makes the date picker input component disabled. This prevents users from being able to\ninteract with the input, and conveys its inactive state to assistive technologies.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "firstDayOfWeek",
+          "type": "DaysOfWeek.Friday | DaysOfWeek.Monday | DaysOfWeek.Saturday | DaysOfWeek.Sunday | DaysOfWeek.Thursday | DaysOfWeek.Tuesday | DaysOfWeek.Wednesday",
+          "mutable": false,
+          "attr": "first-day-of-week",
+          "reflectToAttr": false,
+          "docs": "Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\nDefault is Monday.",
+          "docsTags": [],
+          "default": "DaysOfWeek.Monday",
+          "values": [
+            {
+              "type": "DaysOfWeek.Friday"
+            },
+            {
+              "type": "DaysOfWeek.Monday"
+            },
+            {
+              "type": "DaysOfWeek.Saturday"
+            },
+            {
+              "type": "DaysOfWeek.Sunday"
+            },
+            {
+              "type": "DaysOfWeek.Thursday"
+            },
+            {
+              "type": "DaysOfWeek.Tuesday"
+            },
+            {
+              "type": "DaysOfWeek.Wednesday"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "helpText",
+          "type": "string",
+          "mutable": false,
+          "attr": "help-text",
+          "reflectToAttr": false,
+          "docs": "The date picker's help text. Alternatively, you can use the help-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "invalid",
+          "reflectToAttr": true,
+          "docs": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalidText",
+          "type": "string",
+          "mutable": false,
+          "attr": "invalid-text",
+          "reflectToAttr": false,
+          "docs": "The date picker's invalid text. Alternatively, you can use the invalid-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "isDateDisabled",
+          "type": "(date: Date) => boolean",
+          "mutable": false,
+          "reflectToAttr": false,
+          "docs": "Controls which days are disabled and therefore disallowed.\nFor example, this can be used to disallow selection of weekends.",
+          "docsTags": [],
+          "default": "() => false",
+          "values": [
+            {
+              "type": "(date: Date) => boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The date picker's label. Alternatively, you can use the label slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "localization",
+          "type": "localization",
+          "mutable": false,
+          "reflectToAttr": false,
+          "docs": "Specify date picker's localization.\nCan be used if localization is not supported internally.\nIf not specified, defaulted to use the browser's localization and if not supported, defaulted to english.",
+          "docsTags": [],
+          "default": "browserLocalization",
+          "values": [
+            {
+              "type": "localization"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "mutable": false,
+          "attr": "max",
+          "reflectToAttr": false,
+          "docs": "Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\nThis setting can be used alone or together with the min property.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "mutable": false,
+          "attr": "min",
+          "reflectToAttr": false,
+          "docs": "Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\nThis setting can be used alone or together with the max property.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "Name of the date picker input.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "The date picker input's placeholder text.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "requiredIndicator",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required-indicator",
+          "reflectToAttr": false,
+          "docs": "Set to true to display a required indicator, adds an asterisk to label",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": true,
+          "attr": "value",
+          "reflectToAttr": true,
+          "docs": "Date value. Must be in IS0-8601 format: YYYY-MM-DD.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "hide",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "hide(moveFocusToButton?: boolean) => Promise<void>",
+          "parameters": [],
+          "docs": "Hide the calendar modal. Set `moveFocusToButton` to false to prevent focus\nreturning to the date picker's button. Default is true.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the date picker's input. Use this method instead of the global `focus()`.",
+          "docsTags": []
+        },
+        {
+          "name": "show",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "show() => Promise<void>",
+          "parameters": [],
+          "docs": "Show the calendar modal, moving focus to the calendar inside.",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the date picker input loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-change",
+          "detail": "{ component: \"gr-date-picker\"; valueAsDate: Date; value: string; }",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when a date is selected.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-close",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the panel closes.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the date picker input gains focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-open",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the panel opens.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--backdrop-color",
+          "annotation": "prop",
+          "docs": "Background color of the backdrop (used on small viewports)"
+        },
+        {
+          "name": "--button-background-color",
+          "annotation": "prop",
+          "docs": "Background color of the calendar button"
+        },
+        {
+          "name": "--button-color",
+          "annotation": "prop",
+          "docs": "Text color of the calendar button"
+        },
+        {
+          "name": "--focus-border-color",
+          "annotation": "prop",
+          "docs": "The border color to use when controls receives focus."
+        },
+        {
+          "name": "--focus-ring",
+          "annotation": "prop",
+          "docs": "The focus ring style to use when controls receives focus, a `box-shadow` property."
+        },
+        {
+          "name": "--input-background-color",
+          "annotation": "prop",
+          "docs": "Background color of the input"
+        },
+        {
+          "name": "--input-background-color-invalid",
+          "annotation": "prop",
+          "docs": "Background color of the input when invalid"
+        },
+        {
+          "name": "--input-border-color",
+          "annotation": "prop",
+          "docs": "Border color of the input"
+        },
+        {
+          "name": "--input-border-color-hover",
+          "annotation": "prop",
+          "docs": "Border color of the input on hover"
+        },
+        {
+          "name": "--input-border-color-invalid",
+          "annotation": "prop",
+          "docs": "Border color of the input when invalid"
+        },
+        {
+          "name": "--input-border-color-invalid-hover",
+          "annotation": "prop",
+          "docs": "Border color of the input when invalid on hover"
+        },
+        {
+          "name": "--input-color",
+          "annotation": "prop",
+          "docs": "Text color of the input"
+        },
+        {
+          "name": "--min-height",
+          "annotation": "prop",
+          "docs": "Minimum height of the input"
+        },
+        {
+          "name": "--panel-background-color",
+          "annotation": "prop",
+          "docs": "Background color of the panel"
+        },
+        {
+          "name": "--panel-border-color",
+          "annotation": "prop",
+          "docs": "Border color of the panel"
+        },
+        {
+          "name": "--panel-border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of the panel"
+        },
+        {
+          "name": "--panel-box-shadow",
+          "annotation": "prop",
+          "docs": "Box shadow of the panel"
+        },
+        {
+          "name": "--placeholder-color",
+          "annotation": "prop",
+          "docs": "Text color of the placeholder"
+        },
+        {
+          "name": "--selected-day-background-color",
+          "annotation": "prop",
+          "docs": "Background color of the selected day indicator"
+        },
+        {
+          "name": "--selected-day-color",
+          "annotation": "prop",
+          "docs": "Text color of the selected day indicator"
+        }
+      ],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [
+        "duet-date-picker"
+      ],
+      "dependencyGraph": {
+        "gr-date-picker": [
+          "duet-date-picker"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/dropdown/dropdown.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-dropdown",
+      "readme": "# gr-dropdown\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The dropdown's content."
+        },
+        {
+          "name": "slot",
+          "text": "trigger - The dropdown's trigger, usually a `<gr-button>` element."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "closeOnSelect",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "close-on-select",
+          "reflectToAttr": false,
+          "docs": "Determines whether the dropdown should hide when a menu item is selected.",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "containingElement",
+          "type": "HTMLElement",
+          "mutable": true,
+          "reflectToAttr": false,
+          "docs": "The dropdown will close when the user interacts outside of this element (e.g. clicking).",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "HTMLElement"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "distance",
+          "type": "number",
+          "mutable": false,
+          "attr": "distance",
+          "reflectToAttr": false,
+          "docs": "The distance in pixels from which to offset the panel away from its trigger.",
+          "docsTags": [],
+          "default": "2",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "hoist",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "hoist",
+          "reflectToAttr": false,
+          "docs": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "open",
+          "reflectToAttr": true,
+          "docs": "Indicates whether or not the dropdown is open. You can use this in lieu of the show/hide methods.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "placement",
+          "type": "\"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\" | \"top\" | \"top-end\" | \"top-start\"",
+          "mutable": false,
+          "attr": "placement",
+          "reflectToAttr": false,
+          "docs": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
+          "docsTags": [],
+          "default": "'bottom-start'",
+          "values": [
+            {
+              "value": "bottom",
+              "type": "string"
+            },
+            {
+              "value": "bottom-end",
+              "type": "string"
+            },
+            {
+              "value": "bottom-start",
+              "type": "string"
+            },
+            {
+              "value": "left",
+              "type": "string"
+            },
+            {
+              "value": "left-end",
+              "type": "string"
+            },
+            {
+              "value": "left-start",
+              "type": "string"
+            },
+            {
+              "value": "right",
+              "type": "string"
+            },
+            {
+              "value": "right-end",
+              "type": "string"
+            },
+            {
+              "value": "right-start",
+              "type": "string"
+            },
+            {
+              "value": "top",
+              "type": "string"
+            },
+            {
+              "value": "top-end",
+              "type": "string"
+            },
+            {
+              "value": "top-start",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "skidding",
+          "type": "number",
+          "mutable": false,
+          "attr": "skidding",
+          "reflectToAttr": false,
+          "docs": "The distance in pixels from which to offset the panel along its trigger.",
+          "docsTags": [],
+          "default": "0",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "focusOnTrigger",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "focusOnTrigger() => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the trigger.",
+          "docsTags": []
+        },
+        {
+          "name": "hide",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "hide() => Promise<void>",
+          "parameters": [],
+          "docs": "Hides the dropdown panel",
+          "docsTags": []
+        },
+        {
+          "name": "show",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "show() => Promise<void>",
+          "parameters": [],
+          "docs": "Shows the dropdown panel",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-after-hide",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted after the dropdown closes and all transitions are complete.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-after-show",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted after the dropdown opens and all transitions are complete.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-hide",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the dropdown closes. Calling `event.preventDefault()` will prevent it from being closed.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-show",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the dropdown opens. Calling `event.preventDefault()` will prevent it from being opened.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--panel-background-color",
+          "annotation": "prop",
+          "docs": "Background color of the dropdown panel"
+        },
+        {
+          "name": "--panel-border-color",
+          "annotation": "prop",
+          "docs": "Border color of the button"
+        },
+        {
+          "name": "--panel-border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of the dropdown panel"
+        },
+        {
+          "name": "--panel-box-shadow",
+          "annotation": "prop",
+          "docs": "Box shadow of the dropdown panel"
+        },
+        {
+          "name": "--transition",
+          "annotation": "prop",
+          "docs": "Transition of the dropdown"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The dropdown's content."
+        },
+        {
+          "name": "trigger",
+          "docs": "The dropdown's trigger, usually a `<gr-button>` element."
+        }
+      ],
+      "parts": [],
+      "dependents": [
+        "gr-select"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "gr-select": [
+          "gr-dropdown"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/field-group/field-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-field-group",
+      "readme": "# gr-field-group\n\n\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The default slot where fields are placed."
+        },
+        {
+          "name": "slot",
+          "text": "label - The field group label. Recommended for proper accessibility. Alternatively, you can use the label prop."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "horizontal",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "horizontal",
+          "reflectToAttr": true,
+          "docs": "Render the fields horizontal instead of vertical",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The field group label. Recommended for proper accessibility. Alternatively, you can use the label slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--align-fields",
+          "annotation": "prop",
+          "docs": "Alignment of fields on cross-axis, an `align-items` Flexbox property"
+        },
+        {
+          "name": "--margin-between-fields",
+          "annotation": "prop",
+          "docs": "Margin between the children"
+        },
+        {
+          "name": "--margin-between-fields-horizontal",
+          "annotation": "prop",
+          "docs": "Margin between the children when layout is horizontal"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The default slot where fields are placed."
+        },
+        {
+          "name": "label",
+          "docs": "The field group label. Recommended for proper accessibility. Alternatively, you can use the label prop."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/input/input.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-input",
+      "readme": "# gr-input\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "label - The input's label. Alternatively, you can use the label prop."
+        },
+        {
+          "name": "slot",
+          "text": "help-text - Help text that describes how to use the input."
+        },
+        {
+          "name": "slot",
+          "text": "invalid-text - Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        },
+        {
+          "name": "slot",
+          "text": "start - Used to prepend an icon or similar element to the input."
+        },
+        {
+          "name": "slot",
+          "text": "end - Used to append an icon or similar element to the input."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "autocapitalize",
+          "type": "string",
+          "mutable": false,
+          "attr": "autocapitalize",
+          "reflectToAttr": false,
+          "docs": "Indicates whether and how the text value should be automatically capitalized as it is entered/edited by the user.\nAvailable options: `\"off\"`, `\"none\"`, `\"on\"`, `\"sentences\"`, `\"words\"`, `\"characters\"`.",
+          "docsTags": [],
+          "default": "'off'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "autocomplete",
+          "type": "\"name\" | \"on\" | \"off\" | \"honorific-prefix\" | \"given-name\" | \"additional-name\" | \"family-name\" | \"honorific-suffix\" | \"nickname\" | \"email\" | \"username\" | \"new-password\" | \"current-password\" | \"one-time-code\" | \"organization-title\" | \"organization\" | \"street-address\" | \"address-line1\" | \"address-line2\" | \"address-line3\" | \"address-level4\" | \"address-level3\" | \"address-level2\" | \"address-level1\" | \"country\" | \"country-name\" | \"postal-code\" | \"cc-name\" | \"cc-given-name\" | \"cc-additional-name\" | \"cc-family-name\" | \"cc-number\" | \"cc-exp\" | \"cc-exp-month\" | \"cc-exp-year\" | \"cc-csc\" | \"cc-type\" | \"transaction-currency\" | \"transaction-amount\" | \"language\" | \"bday\" | \"bday-day\" | \"bday-month\" | \"bday-year\" | \"sex\" | \"tel\" | \"tel-country-code\" | \"tel-national\" | \"tel-area-code\" | \"tel-local\" | \"tel-extension\" | \"impp\" | \"url\" | \"photo\"",
+          "mutable": false,
+          "attr": "autocomplete",
+          "reflectToAttr": false,
+          "docs": "Indicates whether the value of the control can be automatically completed by the browser.",
+          "docsTags": [],
+          "default": "'off'",
+          "values": [
+            {
+              "value": "name",
+              "type": "string"
+            },
+            {
+              "value": "on",
+              "type": "string"
+            },
+            {
+              "value": "off",
+              "type": "string"
+            },
+            {
+              "value": "honorific-prefix",
+              "type": "string"
+            },
+            {
+              "value": "given-name",
+              "type": "string"
+            },
+            {
+              "value": "additional-name",
+              "type": "string"
+            },
+            {
+              "value": "family-name",
+              "type": "string"
+            },
+            {
+              "value": "honorific-suffix",
+              "type": "string"
+            },
+            {
+              "value": "nickname",
+              "type": "string"
+            },
+            {
+              "value": "email",
+              "type": "string"
+            },
+            {
+              "value": "username",
+              "type": "string"
+            },
+            {
+              "value": "new-password",
+              "type": "string"
+            },
+            {
+              "value": "current-password",
+              "type": "string"
+            },
+            {
+              "value": "one-time-code",
+              "type": "string"
+            },
+            {
+              "value": "organization-title",
+              "type": "string"
+            },
+            {
+              "value": "organization",
+              "type": "string"
+            },
+            {
+              "value": "street-address",
+              "type": "string"
+            },
+            {
+              "value": "address-line1",
+              "type": "string"
+            },
+            {
+              "value": "address-line2",
+              "type": "string"
+            },
+            {
+              "value": "address-line3",
+              "type": "string"
+            },
+            {
+              "value": "address-level4",
+              "type": "string"
+            },
+            {
+              "value": "address-level3",
+              "type": "string"
+            },
+            {
+              "value": "address-level2",
+              "type": "string"
+            },
+            {
+              "value": "address-level1",
+              "type": "string"
+            },
+            {
+              "value": "country",
+              "type": "string"
+            },
+            {
+              "value": "country-name",
+              "type": "string"
+            },
+            {
+              "value": "postal-code",
+              "type": "string"
+            },
+            {
+              "value": "cc-name",
+              "type": "string"
+            },
+            {
+              "value": "cc-given-name",
+              "type": "string"
+            },
+            {
+              "value": "cc-additional-name",
+              "type": "string"
+            },
+            {
+              "value": "cc-family-name",
+              "type": "string"
+            },
+            {
+              "value": "cc-number",
+              "type": "string"
+            },
+            {
+              "value": "cc-exp",
+              "type": "string"
+            },
+            {
+              "value": "cc-exp-month",
+              "type": "string"
+            },
+            {
+              "value": "cc-exp-year",
+              "type": "string"
+            },
+            {
+              "value": "cc-csc",
+              "type": "string"
+            },
+            {
+              "value": "cc-type",
+              "type": "string"
+            },
+            {
+              "value": "transaction-currency",
+              "type": "string"
+            },
+            {
+              "value": "transaction-amount",
+              "type": "string"
+            },
+            {
+              "value": "language",
+              "type": "string"
+            },
+            {
+              "value": "bday",
+              "type": "string"
+            },
+            {
+              "value": "bday-day",
+              "type": "string"
+            },
+            {
+              "value": "bday-month",
+              "type": "string"
+            },
+            {
+              "value": "bday-year",
+              "type": "string"
+            },
+            {
+              "value": "sex",
+              "type": "string"
+            },
+            {
+              "value": "tel",
+              "type": "string"
+            },
+            {
+              "value": "tel-country-code",
+              "type": "string"
+            },
+            {
+              "value": "tel-national",
+              "type": "string"
+            },
+            {
+              "value": "tel-area-code",
+              "type": "string"
+            },
+            {
+              "value": "tel-local",
+              "type": "string"
+            },
+            {
+              "value": "tel-extension",
+              "type": "string"
+            },
+            {
+              "value": "impp",
+              "type": "string"
+            },
+            {
+              "value": "url",
+              "type": "string"
+            },
+            {
+              "value": "photo",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "autocorrect",
+          "type": "\"off\" | \"on\"",
+          "mutable": false,
+          "attr": "autocorrect",
+          "reflectToAttr": false,
+          "docs": "Whether auto correction should be enabled when the user is entering/editing the text value.",
+          "docsTags": [],
+          "default": "'off'",
+          "values": [
+            {
+              "value": "off",
+              "type": "string"
+            },
+            {
+              "value": "on",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "autofocus",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "autofocus",
+          "reflectToAttr": false,
+          "docs": "This Boolean attribute lets you specify that a form control should have input focus when the page loads.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "clearable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "clearable",
+          "reflectToAttr": false,
+          "docs": "Set to true to add a clear button when the input is populated.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "debounce",
+          "type": "number",
+          "mutable": false,
+          "attr": "debounce",
+          "reflectToAttr": false,
+          "docs": "Set the amount of time, in milliseconds, to wait to trigger the `gr-change` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.",
+          "docsTags": [],
+          "default": "0",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "Set to true to disable the input control.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "enterkeyhint",
+          "type": "\"done\" | \"enter\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\"",
+          "mutable": false,
+          "attr": "enterkeyhint",
+          "reflectToAttr": false,
+          "docs": "A hint to the browser for which enter key to display.\nPossible values: `\"enter\"`, `\"done\"`, `\"go\"`, `\"next\"`,\n`\"previous\"`, `\"search\"`, and `\"send\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "done",
+              "type": "string"
+            },
+            {
+              "value": "enter",
+              "type": "string"
+            },
+            {
+              "value": "go",
+              "type": "string"
+            },
+            {
+              "value": "next",
+              "type": "string"
+            },
+            {
+              "value": "previous",
+              "type": "string"
+            },
+            {
+              "value": "search",
+              "type": "string"
+            },
+            {
+              "value": "send",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "helpText",
+          "type": "string",
+          "mutable": false,
+          "attr": "help-text",
+          "reflectToAttr": false,
+          "docs": "The input's help text. Alternatively, you can use the help-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "hideAppearance",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "hide-appearance",
+          "reflectToAttr": false,
+          "docs": "Set to true to hide input appearances.",
+          "docsTags": [],
+          "default": "true",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "inputmode",
+          "type": "\"decimal\" | \"email\" | \"none\" | \"numeric\" | \"search\" | \"tel\" | \"text\" | \"url\"",
+          "mutable": false,
+          "attr": "inputmode",
+          "reflectToAttr": false,
+          "docs": "The input's inputmode attribute.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "decimal",
+              "type": "string"
+            },
+            {
+              "value": "email",
+              "type": "string"
+            },
+            {
+              "value": "none",
+              "type": "string"
+            },
+            {
+              "value": "numeric",
+              "type": "string"
+            },
+            {
+              "value": "search",
+              "type": "string"
+            },
+            {
+              "value": "tel",
+              "type": "string"
+            },
+            {
+              "value": "text",
+              "type": "string"
+            },
+            {
+              "value": "url",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "invalid",
+          "reflectToAttr": true,
+          "docs": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalidText",
+          "type": "string",
+          "mutable": false,
+          "attr": "invalid-text",
+          "reflectToAttr": false,
+          "docs": "The input's invalid text. Alternatively, you can use the invalid-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The inputs's label. Alternatively, you can use the label slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "mutable": false,
+          "attr": "max",
+          "reflectToAttr": false,
+          "docs": "The maximum value, which must not be less than its minimum (min attribute) value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "maxlength",
+          "type": "number",
+          "mutable": false,
+          "attr": "maxlength",
+          "reflectToAttr": false,
+          "docs": "Specifies how many characters are allowed.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "mutable": false,
+          "attr": "min",
+          "reflectToAttr": false,
+          "docs": "The minimum value, which must not be greater than its maximum (max attribute) value.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": true,
+          "docs": "The input's name.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "pattern",
+          "type": "string",
+          "mutable": false,
+          "attr": "pattern",
+          "reflectToAttr": false,
+          "docs": "Specifies a regular expression that the input value is checked against.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "pill",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "pill",
+          "reflectToAttr": false,
+          "docs": "Set to true to draw a pill-style input with rounded edges.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "The input's placeholder text.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "readonly",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "readonly",
+          "reflectToAttr": true,
+          "docs": "If `true`, the user cannot modify the value.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "requiredIndicator",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required-indicator",
+          "reflectToAttr": false,
+          "docs": "Set to true to display a required indicator, adds an asterisk to label",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"medium\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "The input's size.",
+          "docsTags": [],
+          "default": "'medium'",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "medium",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "spellcheck",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "spellcheck",
+          "reflectToAttr": false,
+          "docs": "If `true`, the element will have its spelling and grammar checked.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "step",
+          "type": "string",
+          "mutable": false,
+          "attr": "step",
+          "reflectToAttr": false,
+          "docs": "Works with the min and max attributes to limit the increments at which a value can be set.\nPossible values are: `\"any\"` or a positive floating point number.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "togglePassword",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "toggle-password",
+          "reflectToAttr": false,
+          "docs": "Set to true to add a password toggle button for password inputs.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "\"date\" | \"datetime-local\" | \"email\" | \"month\" | \"number\" | \"password\" | \"search\" | \"tel\" | \"text\" | \"time\" | \"url\" | \"week\"",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": true,
+          "docs": "The type of control to display. The default type is text.",
+          "docsTags": [],
+          "default": "'text'",
+          "values": [
+            {
+              "value": "date",
+              "type": "string"
+            },
+            {
+              "value": "datetime-local",
+              "type": "string"
+            },
+            {
+              "value": "email",
+              "type": "string"
+            },
+            {
+              "value": "month",
+              "type": "string"
+            },
+            {
+              "value": "number",
+              "type": "string"
+            },
+            {
+              "value": "password",
+              "type": "string"
+            },
+            {
+              "value": "search",
+              "type": "string"
+            },
+            {
+              "value": "tel",
+              "type": "string"
+            },
+            {
+              "value": "text",
+              "type": "string"
+            },
+            {
+              "value": "time",
+              "type": "string"
+            },
+            {
+              "value": "url",
+              "type": "string"
+            },
+            {
+              "value": "week",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": true,
+          "attr": "value",
+          "reflectToAttr": true,
+          "docs": "The input's value attribute.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes focus from the input.",
+          "docsTags": []
+        },
+        {
+          "name": "select",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "select() => Promise<void>",
+          "parameters": [],
+          "docs": "Selects all the text in the input.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus(options?: FocusOptions) => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the input.",
+          "docsTags": []
+        },
+        {
+          "name": "setRangeText",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setRangeText(replacement: string, start: number, end: number, selectMode?: 'select' | 'start' | 'end' | 'preserve') => Promise<void>",
+          "parameters": [],
+          "docs": "Replaces a range of text with a new string.",
+          "docsTags": []
+        },
+        {
+          "name": "setSelectionRange",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setSelectionRange(selectionStart: number, selectionEnd: number, selectionDirection?: 'forward' | 'backward' | 'none') => Promise<void>",
+          "parameters": [],
+          "docs": "Sets the start and end positions of the text selection (0-based).",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-change",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control's value changes.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-clear",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the clear button is activated.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control gains focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-input",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control receives input.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--background-color",
+          "annotation": "prop",
+          "docs": "Background color of the input"
+        },
+        {
+          "name": "--background-color-focus",
+          "annotation": "prop",
+          "docs": "Background color of the input on focus"
+        },
+        {
+          "name": "--background-color-hover",
+          "annotation": "prop",
+          "docs": "Background color of the input on hover"
+        },
+        {
+          "name": "--background-color-invalid",
+          "annotation": "prop",
+          "docs": "Background color of the input when invalid"
+        },
+        {
+          "name": "--background-color-invalid-hover",
+          "annotation": "prop",
+          "docs": "Background color of the input when invalid on focus"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of the input"
+        },
+        {
+          "name": "--border-color-focus",
+          "annotation": "prop",
+          "docs": "Border color of the input on focus"
+        },
+        {
+          "name": "--border-color-hover",
+          "annotation": "prop",
+          "docs": "Border color of the input on hover"
+        },
+        {
+          "name": "--border-color-invalid",
+          "annotation": "prop",
+          "docs": "Border color of the input when invalid"
+        },
+        {
+          "name": "--border-color-invalid-hover",
+          "annotation": "prop",
+          "docs": "Border color of the input when invalid on focus"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of the input"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Text color of the input"
+        },
+        {
+          "name": "--focus-ring",
+          "annotation": "prop",
+          "docs": "The focus ring style to use when the input receives focus, a `box-shadow` property."
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of the input"
+        },
+        {
+          "name": "--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of the input"
+        },
+        {
+          "name": "--icon-color",
+          "annotation": "prop",
+          "docs": "Color of the icons (start & end slots, clearable & password toggle)"
+        },
+        {
+          "name": "--icon-color-hover",
+          "annotation": "prop",
+          "docs": "Color of the icons (clearable & password toggle) on hover"
+        },
+        {
+          "name": "--min-height",
+          "annotation": "prop",
+          "docs": "Minimum height of the input"
+        },
+        {
+          "name": "--padding-end",
+          "annotation": "prop",
+          "docs": "Right padding of the input (will be left padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-start",
+          "annotation": "prop",
+          "docs": "Left padding of the input (will be right padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--placeholder-color",
+          "annotation": "prop",
+          "docs": "Text color of the placeholder"
+        },
+        {
+          "name": "--text-transform",
+          "annotation": "prop",
+          "docs": "Text transform of the input"
+        }
+      ],
+      "slots": [
+        {
+          "name": "end",
+          "docs": "Used to append an icon or similar element to the input."
+        },
+        {
+          "name": "help-text",
+          "docs": "Help text that describes how to use the input."
+        },
+        {
+          "name": "invalid-text",
+          "docs": "Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        },
+        {
+          "name": "label",
+          "docs": "The input's label. Alternatively, you can use the label prop."
+        },
+        {
+          "name": "start",
+          "docs": "Used to prepend an icon or similar element to the input."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/menu/menu.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-menu",
+      "readme": "# gr-menu\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The menu's content, including menu items, menu dividers, and menu labels."
+        }
+      ],
+      "usage": {},
+      "props": [],
+      "methods": [
+        {
+          "name": "typeToSelect",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "typeToSelect(key: string) => Promise<void>",
+          "parameters": [],
+          "docs": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe key passed will be appended to the internal query and the selection will be updated. After a brief period, the\ninternal query is cleared automatically. This method is intended to be used with the keydown event. Useful for\nenabling type-to-select when the menu doesn't have focus.",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-select",
+          "detail": "{ item: HTMLGrMenuItemElement; }",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when a menu item is selected.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--padding-bottom",
+          "annotation": "prop",
+          "docs": "Bottom padding of the menu"
+        },
+        {
+          "name": "--padding-top",
+          "annotation": "prop",
+          "docs": "Top padding of the menu"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The menu's content, including menu items, menu dividers, and menu labels."
+        }
+      ],
+      "parts": [],
+      "dependents": [
+        "gr-select"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "gr-select": [
+          "gr-menu"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/menu-divider/menu-divider.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-menu-divider",
+      "readme": "# gr-menu-divider\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of the menu item divider"
+        },
+        {
+          "name": "--margin-bottom",
+          "annotation": "prop",
+          "docs": "Bottom margin of the menu item divider"
+        },
+        {
+          "name": "--margin-top",
+          "annotation": "prop",
+          "docs": "Top margin of the menu item divider"
+        }
+      ],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/menu-item/menu-item.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-menu-item",
+      "readme": "# gr-menu-item\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The menu item's label."
+        },
+        {
+          "name": "slot",
+          "text": "start - Content is placed to the left of the menu item's label (will be to the right when we support right-to-left direction)"
+        },
+        {
+          "name": "slot",
+          "text": "end - Content is placed to the right of the menu item's label (will be to the left when we support right-to-left direction)"
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw the item in a checked state.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw the menu item in a disabled state.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": true,
+          "docs": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes focus from the menu item.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus(options?: FocusOptions) => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the menu item.",
+          "docsTags": []
+        }
+      ],
+      "events": [],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--background-color",
+          "annotation": "prop",
+          "docs": "Background color of the menu item"
+        },
+        {
+          "name": "--background-color-focused",
+          "annotation": "prop",
+          "docs": "Background color of the menu item when focused"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Text color of the menu item"
+        },
+        {
+          "name": "--color-disabled",
+          "annotation": "prop",
+          "docs": "Text color of the menu item when disabled"
+        },
+        {
+          "name": "--color-focused",
+          "annotation": "prop",
+          "docs": "Text color of the menu item when focused"
+        },
+        {
+          "name": "--line-height",
+          "annotation": "prop",
+          "docs": "Line height of the menu item"
+        },
+        {
+          "name": "--padding-bottom",
+          "annotation": "prop",
+          "docs": "Bottom padding of the menu item"
+        },
+        {
+          "name": "--padding-end",
+          "annotation": "prop",
+          "docs": "Right padding of the menu item (will be left padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-start",
+          "annotation": "prop",
+          "docs": "Left padding of the menu item (will be right padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-top",
+          "annotation": "prop",
+          "docs": "Top padding of the menu item"
+        },
+        {
+          "name": "--transition",
+          "annotation": "prop",
+          "docs": "Transition of the menu item"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The menu item's label."
+        },
+        {
+          "name": "end",
+          "docs": "Content is placed to the right of the menu item's label (will be to the left when we support right-to-left direction)"
+        },
+        {
+          "name": "start",
+          "docs": "Content is placed to the left of the menu item's label (will be to the right when we support right-to-left direction)"
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/menu-label/menu-label.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-menu-label",
+      "readme": "# gr-menu-label\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The menu label's content."
+        }
+      ],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--background-color",
+          "annotation": "prop",
+          "docs": "Background color of the menu item label"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Text color of the menu item label"
+        },
+        {
+          "name": "--font-style",
+          "annotation": "prop",
+          "docs": "Font style of the menu item label"
+        },
+        {
+          "name": "--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of the menu item label"
+        },
+        {
+          "name": "--line-height",
+          "annotation": "prop",
+          "docs": "Line height of the menu item label"
+        },
+        {
+          "name": "--padding-bottom",
+          "annotation": "prop",
+          "docs": "Bottom padding of the menu item label"
+        },
+        {
+          "name": "--padding-end",
+          "annotation": "prop",
+          "docs": "Right padding of the menu item label (will be left padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-start",
+          "annotation": "prop",
+          "docs": "Left padding of the menu item label (will be right padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-top",
+          "annotation": "prop",
+          "docs": "Top padding of the menu item label"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The menu label's content."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/radio/radio.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-radio",
+      "readme": "# gr-radio\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The radio's label."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "alignment",
+          "type": "\"bottom\" | \"center\" | \"top\"",
+          "mutable": false,
+          "attr": "alignment",
+          "reflectToAttr": true,
+          "docs": "The radio's alignment attribute.",
+          "docsTags": [],
+          "default": "'center'",
+          "values": [
+            {
+              "value": "bottom",
+              "type": "string"
+            },
+            {
+              "value": "center",
+              "type": "string"
+            },
+            {
+              "value": "top",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "checked",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw the radio in a checked state.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "Set to true to disable the radio.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": true,
+          "attr": "value",
+          "reflectToAttr": true,
+          "docs": "The radio's value attribute.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes focus from the radio.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus(options?: FocusOptions) => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the radio.",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control gains focus.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--control-background-color",
+          "annotation": "prop",
+          "docs": "Background color of the control"
+        },
+        {
+          "name": "--control-background-color-checked",
+          "annotation": "prop",
+          "docs": "Background color of the control when checked"
+        },
+        {
+          "name": "--control-background-color-checked-focus",
+          "annotation": "prop",
+          "docs": "Background color of the control when checked on focus"
+        },
+        {
+          "name": "--control-background-color-checked-hover",
+          "annotation": "prop",
+          "docs": "Background color of the control when checked on hover"
+        },
+        {
+          "name": "--control-background-color-focus",
+          "annotation": "prop",
+          "docs": "Background color of the control on focus"
+        },
+        {
+          "name": "--control-background-color-hover",
+          "annotation": "prop",
+          "docs": "Background color of the control on hover"
+        },
+        {
+          "name": "--control-border-color",
+          "annotation": "prop",
+          "docs": "Border color of the control"
+        },
+        {
+          "name": "--control-border-color-checked",
+          "annotation": "prop",
+          "docs": "Border color of the control when checked"
+        },
+        {
+          "name": "--control-border-color-checked-focus",
+          "annotation": "prop",
+          "docs": "Border color of the control when checked on focus"
+        },
+        {
+          "name": "--control-border-color-checked-hover",
+          "annotation": "prop",
+          "docs": "Border color of the control when checked on hover"
+        },
+        {
+          "name": "--control-border-color-focus",
+          "annotation": "prop",
+          "docs": "Border color of the control on focus"
+        },
+        {
+          "name": "--control-border-color-hover",
+          "annotation": "prop",
+          "docs": "Border color of the control on hover"
+        },
+        {
+          "name": "--control-color-checked",
+          "annotation": "prop",
+          "docs": "Color of the control when checked (the small circle)"
+        },
+        {
+          "name": "--control-size",
+          "annotation": "prop",
+          "docs": "Size of the control"
+        },
+        {
+          "name": "--label-color",
+          "annotation": "prop",
+          "docs": "Color of the label"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The radio's label."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/radio-group/radio-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-radio-group",
+      "readme": "# gr-radio-group\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The default slot where radio controls are placed."
+        },
+        {
+          "name": "slot",
+          "text": "label - The radio group label. Required for proper accessibility. Alternatively, you can use the label prop."
+        },
+        {
+          "name": "slot",
+          "text": "invalid-text - Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "allowEmptySelection",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "allow-empty-selection",
+          "reflectToAttr": false,
+          "docs": "If `true`, the radios can be deselected.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "horizontal",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "horizontal",
+          "reflectToAttr": true,
+          "docs": "Render the radios horizontal instead of vertical",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "invalid",
+          "reflectToAttr": true,
+          "docs": "Set to true to indicate this field is invalid. Will display the invalid text.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalidText",
+          "type": "string",
+          "mutable": false,
+          "attr": "invalid-text",
+          "reflectToAttr": false,
+          "docs": "The radio group's invalid text. Alternatively, you can use the invalid-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The radio group label. Required for proper accessibility. Alternatively, you can use the label slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "The name of the control, which is submitted with the form data.",
+          "docsTags": [],
+          "default": "this.inputId",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "requiredIndicator",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required-indicator",
+          "reflectToAttr": false,
+          "docs": "Set to true to display a required indicator, adds an asterisk to label",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "any",
+          "mutable": true,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "the value of the radio group.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "any"
+            }
+          ],
+          "optional": true,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "gr-change",
+          "detail": "RadioGroupChangeEventDetail",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the value has changed.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [
+        {
+          "event": "keydown",
+          "target": "document",
+          "capture": false,
+          "passive": false
+        }
+      ],
+      "styles": [
+        {
+          "name": "--align-radios",
+          "annotation": "prop",
+          "docs": "Alignment of radio's on cross-axis, an `align-items` Flexbox property"
+        },
+        {
+          "name": "--margin-between-radios",
+          "annotation": "prop",
+          "docs": "Margin between the gr-radio children"
+        },
+        {
+          "name": "--margin-between-radios-horizontal",
+          "annotation": "prop",
+          "docs": "Margin between the gr-radio children when layout is horizontal"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The default slot where radio controls are placed."
+        },
+        {
+          "name": "invalid-text",
+          "docs": "Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        },
+        {
+          "name": "label",
+          "docs": "The radio group label. Required for proper accessibility. Alternatively, you can use the label prop."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/select/select.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-select",
+      "readme": "# gr-select\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The select's options in the form of menu items."
+        },
+        {
+          "name": "slot",
+          "text": "label - The select's label. Alternatively, you can use the label prop."
+        },
+        {
+          "name": "slot",
+          "text": "help-text - Help text that describes how to use the select. Alternatively, you can use the help-text prop."
+        },
+        {
+          "name": "slot",
+          "text": "invalid-text - Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "clearable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "clearable",
+          "reflectToAttr": false,
+          "docs": "Set to true to add a clear button when the select is populated.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "Set to true to disable the select control.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "helpText",
+          "type": "string",
+          "mutable": false,
+          "attr": "help-text",
+          "reflectToAttr": false,
+          "docs": "The select's help text. Alternatively, you can use the help-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "hoist",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "hoist",
+          "reflectToAttr": false,
+          "docs": "Enable this option to prevent the panel from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "invalid",
+          "reflectToAttr": true,
+          "docs": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalidText",
+          "type": "string",
+          "mutable": false,
+          "attr": "invalid-text",
+          "reflectToAttr": false,
+          "docs": "The select's invalid text. Alternatively, you can use the invalid-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The select's label. Alternatively, you can use the label slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "maxTagsVisible",
+          "type": "number",
+          "mutable": false,
+          "attr": "max-tags-visible",
+          "reflectToAttr": false,
+          "docs": "The maximum number of tags to show when `multiple` is true. After the maximum, \"+n\" will be shown to indicate the\nnumber of additional items that are selected. Set to -1 to remove the limit.",
+          "docsTags": [],
+          "default": "3",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "multiple",
+          "reflectToAttr": false,
+          "docs": "Set to true to enable multiselect.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "The select's name.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "pill",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "pill",
+          "reflectToAttr": false,
+          "docs": "Set to true to draw a pill-style select with rounded edges.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "The select's placeholder text.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "requiredIndicator",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required-indicator",
+          "reflectToAttr": false,
+          "docs": "Set to true to display a required indicator, adds an asterisk to label",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"medium\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "The select's size.",
+          "docsTags": [],
+          "default": "'medium'",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "medium",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string | string[]",
+          "mutable": true,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "The value of the control. This will be a string or an array depending on `multiple`.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string[]"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the select.",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-change",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control's value changes.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the control gains focus.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--background-color",
+          "annotation": "prop",
+          "docs": "Background color of the select"
+        },
+        {
+          "name": "--background-color-focus",
+          "annotation": "prop",
+          "docs": "Background color of the select on focus"
+        },
+        {
+          "name": "--background-color-hover",
+          "annotation": "prop",
+          "docs": "Background color of the select on hover"
+        },
+        {
+          "name": "--background-color-invalid",
+          "annotation": "prop",
+          "docs": "Background color of the select when invalid"
+        },
+        {
+          "name": "--background-color-invalid-hover",
+          "annotation": "prop",
+          "docs": "Background color of the select when invalid on hover"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of the select"
+        },
+        {
+          "name": "--border-color-focus",
+          "annotation": "prop",
+          "docs": "Border color of the select on focus"
+        },
+        {
+          "name": "--border-color-hover",
+          "annotation": "prop",
+          "docs": "Border color of the select on hover"
+        },
+        {
+          "name": "--border-color-invalid",
+          "annotation": "prop",
+          "docs": "Border color of the select when invalid"
+        },
+        {
+          "name": "--border-color-invalid-hover",
+          "annotation": "prop",
+          "docs": "Border color of the select when invalid on hover"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of the select"
+        },
+        {
+          "name": "--caret-margin-end",
+          "annotation": "prop",
+          "docs": "Right margin of the caret (will be left margin when we support right-to-left direction)"
+        },
+        {
+          "name": "--clear-icon-margin-end",
+          "annotation": "prop",
+          "docs": "Right margin of the clear icon (will be left margin when we support right-to-left direction)"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Text color of the select"
+        },
+        {
+          "name": "--focus-ring",
+          "annotation": "prop",
+          "docs": "The focus ring style to use when the control receives focus, a `box-shadow` property."
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of the select"
+        },
+        {
+          "name": "--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of the select"
+        },
+        {
+          "name": "--label-margin-end",
+          "annotation": "prop",
+          "docs": "Right margin of the label (will be left margin when we support right-to-left direction)"
+        },
+        {
+          "name": "--label-margin-start",
+          "annotation": "prop",
+          "docs": "Left margin of the label (will be right margin when we support right-to-left direction)"
+        },
+        {
+          "name": "--min-height",
+          "annotation": "prop",
+          "docs": "Minimum height of the select"
+        },
+        {
+          "name": "--placeholder-color",
+          "annotation": "prop",
+          "docs": "Text color of the placeholder"
+        },
+        {
+          "name": "--tags-margin-end",
+          "annotation": "prop",
+          "docs": "Right margin of the tags (will be left margin when we support right-to-left direction)"
+        },
+        {
+          "name": "--tags-padding-bottom",
+          "annotation": "prop",
+          "docs": "Bottom padding of the tags"
+        },
+        {
+          "name": "--tags-padding-top",
+          "annotation": "prop",
+          "docs": "Top padding of the tags"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The select's options in the form of menu items."
+        },
+        {
+          "name": "help-text",
+          "docs": "Help text that describes how to use the select. Alternatively, you can use the help-text prop."
+        },
+        {
+          "name": "invalid-text",
+          "docs": "Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        },
+        {
+          "name": "label",
+          "docs": "The select's label. Alternatively, you can use the label prop."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [
+        "gr-tag",
+        "gr-dropdown",
+        "gr-menu"
+      ],
+      "dependencyGraph": {
+        "gr-select": [
+          "gr-tag",
+          "gr-dropdown",
+          "gr-menu"
+        ],
+        "gr-tag": [
+          "gr-button"
+        ],
+        "gr-button": [
+          "gr-spinner"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/spinner/spinner.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-spinner",
+      "readme": "# gr-spinner\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--indicator-color",
+          "annotation": "prop",
+          "docs": "The color of the spinner's indicator."
+        },
+        {
+          "name": "--stroke-width",
+          "annotation": "prop",
+          "docs": "The width of the indicator."
+        },
+        {
+          "name": "--track-color",
+          "annotation": "prop",
+          "docs": "The color of the spinner's track."
+        }
+      ],
+      "slots": [],
+      "parts": [],
+      "dependents": [
+        "gr-button"
+      ],
+      "dependencies": [],
+      "dependencyGraph": {
+        "gr-button": [
+          "gr-spinner"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/tab/tab.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-tab",
+      "readme": "# gr-tab\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "active",
+          "reflectToAttr": true,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw the tab in a disabled state.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "panel",
+          "type": "string",
+          "mutable": false,
+          "attr": "panel",
+          "reflectToAttr": true,
+          "docs": "The name of the tab panel the tab will control. The panel must be located in the same tab group.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes focus from the tab.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the tab.",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the button loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the button has focus.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/tab-group/tab-group.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-tab-group",
+      "readme": "# gr-tab-group\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "placement",
+          "type": "\"bottom\" | \"end\" | \"start\" | \"top\"",
+          "mutable": false,
+          "attr": "placement",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "'top'",
+          "values": [
+            {
+              "value": "bottom",
+              "type": "string"
+            },
+            {
+              "value": "end",
+              "type": "string"
+            },
+            {
+              "value": "start",
+              "type": "string"
+            },
+            {
+              "value": "top",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "routeNavigation",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "route-navigation",
+          "reflectToAttr": true,
+          "docs": "Set to use a popstate eventlistner, to use route navigation.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "tabSize",
+          "type": "\"large\" | \"medium\" | \"small\"",
+          "mutable": false,
+          "attr": "tab-size",
+          "reflectToAttr": true,
+          "docs": "The tab's size.",
+          "docsTags": [],
+          "default": "'medium'",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "medium",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [
+        {
+          "name": "active-tab-indicator",
+          "docs": ""
+        },
+        {
+          "name": "body",
+          "docs": ""
+        },
+        {
+          "name": "nav",
+          "docs": ""
+        },
+        {
+          "name": "tabs",
+          "docs": ""
+        }
+      ],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/tab-panel/tab-panel.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-tab-panel",
+      "readme": "# gr-tab-panel\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "active",
+          "reflectToAttr": true,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": true,
+          "docs": "",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [
+        {
+          "name": "base",
+          "docs": ""
+        }
+      ],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/tag/tag.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-tag",
+      "readme": "# gr-tag\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "- The tag's content."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "clearable",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "clearable",
+          "reflectToAttr": true,
+          "docs": "Set to true to make the tag clearable.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "pill",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "pill",
+          "reflectToAttr": true,
+          "docs": "Set to true to draw a pill-style tag with rounded edges.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"medium\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "The tag's size.",
+          "docsTags": [],
+          "default": "'medium'",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "medium",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "mutable": false,
+          "attr": "title",
+          "reflectToAttr": true,
+          "docs": "The tag's title.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "truncate",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "truncate",
+          "reflectToAttr": true,
+          "docs": "Set to true to make the tag truncated.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "\"danger\" | \"info\" | \"primary\" | \"success\" | \"warning\"",
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": true,
+          "docs": "The tag's type.",
+          "docsTags": [],
+          "default": "'primary'",
+          "values": [
+            {
+              "value": "danger",
+              "type": "string"
+            },
+            {
+              "value": "info",
+              "type": "string"
+            },
+            {
+              "value": "primary",
+              "type": "string"
+            },
+            {
+              "value": "success",
+              "type": "string"
+            },
+            {
+              "value": "warning",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "gr-clear",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the clear button is activated.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--background-color",
+          "annotation": "prop",
+          "docs": "Background color of the tag"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of the tag"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of the tag"
+        },
+        {
+          "name": "--border-style",
+          "annotation": "prop",
+          "docs": "Border style of the tag"
+        },
+        {
+          "name": "--border-width",
+          "annotation": "prop",
+          "docs": "Border width of the tag"
+        },
+        {
+          "name": "--clear-color",
+          "annotation": "prop",
+          "docs": "Color of the clear icon"
+        },
+        {
+          "name": "--clear-color-hover",
+          "annotation": "prop",
+          "docs": "Color of the clear icon on hover"
+        },
+        {
+          "name": "--clear-margin-left",
+          "annotation": "prop",
+          "docs": "Margin left of the clear icon"
+        },
+        {
+          "name": "--clear-margin-right",
+          "annotation": "prop",
+          "docs": "Margin right of the clear icon"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Text color of the tag"
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of the tag"
+        },
+        {
+          "name": "--height",
+          "annotation": "prop",
+          "docs": "Height of the tag"
+        },
+        {
+          "name": "--line-height",
+          "annotation": "prop",
+          "docs": "Line height of the tag"
+        },
+        {
+          "name": "--padding-bottom",
+          "annotation": "prop",
+          "docs": "Bottom padding of the tag"
+        },
+        {
+          "name": "--padding-end",
+          "annotation": "prop",
+          "docs": "Right padding of the tag (will be left padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-start",
+          "annotation": "prop",
+          "docs": "Left padding of the tag (will be right padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-top",
+          "annotation": "prop",
+          "docs": "Top padding of the tag"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "docs": "The tag's content."
+        }
+      ],
+      "parts": [],
+      "dependents": [
+        "gr-select"
+      ],
+      "dependencies": [
+        "gr-button"
+      ],
+      "dependencyGraph": {
+        "gr-tag": [
+          "gr-button"
+        ],
+        "gr-button": [
+          "gr-spinner"
+        ],
+        "gr-select": [
+          "gr-tag"
+        ]
+      }
+    },
+    {
+      "filePath": "./src/components/textarea/textarea.tsx",
+      "encapsulation": "shadow",
+      "tag": "gr-textarea",
+      "readme": "# gr-textarea\n",
+      "docs": "",
+      "docsTags": [
+        {
+          "name": "slot",
+          "text": "label - The textarea's label. Alternatively, you can use the label prop."
+        },
+        {
+          "name": "slot",
+          "text": "help-text - Help text that describes how to use the textarea."
+        },
+        {
+          "name": "slot",
+          "text": "invalid-text - Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        }
+      ],
+      "usage": {},
+      "props": [
+        {
+          "name": "autocapitalize",
+          "type": "string",
+          "mutable": false,
+          "attr": "autocapitalize",
+          "reflectToAttr": false,
+          "docs": "Indicates whether and how the text value should be automatically capitalized as it is entered/edited by the user.\nAvailable options: `\"off\"`, `\"none\"`, `\"on\"`, `\"sentences\"`, `\"words\"`, `\"characters\"`.",
+          "docsTags": [],
+          "default": "'off'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "autocorrect",
+          "type": "\"off\" | \"on\"",
+          "mutable": false,
+          "attr": "autocorrect",
+          "reflectToAttr": false,
+          "docs": "Whether auto correction should be enabled when the user is entering/editing the text value.",
+          "docsTags": [],
+          "default": "'off'",
+          "values": [
+            {
+              "value": "off",
+              "type": "string"
+            },
+            {
+              "value": "on",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "autofocus",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "autofocus",
+          "reflectToAttr": false,
+          "docs": "This Boolean attribute lets you specify that a form control should have input focus when the page loads.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "debounce",
+          "type": "number",
+          "mutable": false,
+          "attr": "debounce",
+          "reflectToAttr": false,
+          "docs": "Set the amount of time, in milliseconds, to wait to trigger the `gr-change` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.",
+          "docsTags": [],
+          "default": "0",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "Set to true to disable the textarea.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "enterkeyhint",
+          "type": "\"done\" | \"enter\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\"",
+          "mutable": false,
+          "attr": "enterkeyhint",
+          "reflectToAttr": false,
+          "docs": "A hint to the browser for which enter key to display.\nPossible values: `\"enter\"`, `\"done\"`, `\"go\"`, `\"next\"`,\n`\"previous\"`, `\"search\"`, and `\"send\"`.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "done",
+              "type": "string"
+            },
+            {
+              "value": "enter",
+              "type": "string"
+            },
+            {
+              "value": "go",
+              "type": "string"
+            },
+            {
+              "value": "next",
+              "type": "string"
+            },
+            {
+              "value": "previous",
+              "type": "string"
+            },
+            {
+              "value": "search",
+              "type": "string"
+            },
+            {
+              "value": "send",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "helpText",
+          "type": "string",
+          "mutable": false,
+          "attr": "help-text",
+          "reflectToAttr": false,
+          "docs": "The textarea's help text. Alternatively, you can use the help-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "inputmode",
+          "type": "\"decimal\" | \"email\" | \"none\" | \"numeric\" | \"search\" | \"tel\" | \"text\" | \"url\"",
+          "mutable": false,
+          "attr": "inputmode",
+          "reflectToAttr": false,
+          "docs": "The textarea's inputmode attribute.",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "decimal",
+              "type": "string"
+            },
+            {
+              "value": "email",
+              "type": "string"
+            },
+            {
+              "value": "none",
+              "type": "string"
+            },
+            {
+              "value": "numeric",
+              "type": "string"
+            },
+            {
+              "value": "search",
+              "type": "string"
+            },
+            {
+              "value": "tel",
+              "type": "string"
+            },
+            {
+              "value": "text",
+              "type": "string"
+            },
+            {
+              "value": "url",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "invalid",
+          "reflectToAttr": true,
+          "docs": "Set to true to indicate this field is invalid. Will display the invalid text instead of the help text",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "invalidText",
+          "type": "string",
+          "mutable": false,
+          "attr": "invalid-text",
+          "reflectToAttr": false,
+          "docs": "The input's invalid text. Alternatively, you can use the invalid-text slot.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The textarea's label. Alternatively, you can use the label slot.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "maxHeight",
+          "type": "number",
+          "mutable": false,
+          "attr": "max-height",
+          "reflectToAttr": false,
+          "docs": "The number of max rows",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "maxlength",
+          "type": "number",
+          "mutable": false,
+          "attr": "maxlength",
+          "reflectToAttr": false,
+          "docs": "Specifies how many characters are allowed.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": true,
+          "docs": "The textarea's name attribute.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "mutable": false,
+          "attr": "placeholder",
+          "reflectToAttr": false,
+          "docs": "The textarea's placeholder text.",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "readonly",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "readonly",
+          "reflectToAttr": true,
+          "docs": "If `true`, the user cannot modify the value.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "requiredIndicator",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "required-indicator",
+          "reflectToAttr": false,
+          "docs": "Set to true to display a required indicator, adds an asterisk to label",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "resize",
+          "type": "\"auto\" | \"none\" | \"vertical\"",
+          "mutable": false,
+          "attr": "resize",
+          "reflectToAttr": false,
+          "docs": "Controls how the textarea can be resized.",
+          "docsTags": [],
+          "default": "'vertical'",
+          "values": [
+            {
+              "value": "auto",
+              "type": "string"
+            },
+            {
+              "value": "none",
+              "type": "string"
+            },
+            {
+              "value": "vertical",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "mutable": false,
+          "attr": "rows",
+          "reflectToAttr": false,
+          "docs": "The number of rows to display by default.",
+          "docsTags": [],
+          "default": "4",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"large\" | \"medium\" | \"small\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "The textarea's size.",
+          "docsTags": [],
+          "default": "'medium'",
+          "values": [
+            {
+              "value": "large",
+              "type": "string"
+            },
+            {
+              "value": "medium",
+              "type": "string"
+            },
+            {
+              "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "spellcheck",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "spellcheck",
+          "reflectToAttr": false,
+          "docs": "If `true`, the element will have its spelling and grammar checked.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "mutable": true,
+          "attr": "value",
+          "reflectToAttr": true,
+          "docs": "The textarea's value attribute.",
+          "docsTags": [],
+          "default": "''",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "removeFocus() => Promise<void>",
+          "parameters": [],
+          "docs": "Removes focus fromt the textarea.",
+          "docsTags": []
+        },
+        {
+          "name": "select",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "select() => Promise<void>",
+          "parameters": [],
+          "docs": "Selects all the text in the input.",
+          "docsTags": []
+        },
+        {
+          "name": "setFocus",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setFocus(options?: FocusOptions) => Promise<void>",
+          "parameters": [],
+          "docs": "Sets focus on the textarea.",
+          "docsTags": []
+        },
+        {
+          "name": "setRangeText",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setRangeText(replacement: string, start: number, end: number, selectMode?: 'select' | 'start' | 'end' | 'preserve') => Promise<void>",
+          "parameters": [],
+          "docs": "Replaces a range of text with a new string.",
+          "docsTags": []
+        },
+        {
+          "name": "setSelectionRange",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setSelectionRange(selectionStart: number, selectionEnd: number, selectionDirection?: 'forward' | 'backward' | 'none') => Promise<void>",
+          "parameters": [],
+          "docs": "Sets the start and end positions of the text selection (0-based).",
+          "docsTags": []
+        },
+        {
+          "name": "setTextareaHeight",
+          "returns": {
+            "type": "Promise<void>",
+            "docs": ""
+          },
+          "signature": "setTextareaHeight() => Promise<void>",
+          "parameters": [],
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "events": [
+        {
+          "event": "gr-blur",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the textarea loses focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-change",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the textarea's value changes.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-focus",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the textarea has focus.",
+          "docsTags": []
+        },
+        {
+          "event": "gr-input",
+          "detail": "void",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "Emitted when the textarea receives input.",
+          "docsTags": []
+        }
+      ],
+      "listeners": [],
+      "styles": [
+        {
+          "name": "--background-color",
+          "annotation": "prop",
+          "docs": "Background color of the textarea"
+        },
+        {
+          "name": "--background-color-focus",
+          "annotation": "prop",
+          "docs": "Background color of the textarea on focus"
+        },
+        {
+          "name": "--background-color-hover",
+          "annotation": "prop",
+          "docs": "Background color of the textarea on hover"
+        },
+        {
+          "name": "--background-color-invalid",
+          "annotation": "prop",
+          "docs": "Background color of the textarea when invalid"
+        },
+        {
+          "name": "--background-color-invalid-hover",
+          "annotation": "prop",
+          "docs": "Background color of the textarea when invalid on focus"
+        },
+        {
+          "name": "--border-color",
+          "annotation": "prop",
+          "docs": "Border color of the textarea"
+        },
+        {
+          "name": "--border-color-focus",
+          "annotation": "prop",
+          "docs": "Border color of the textarea on focus"
+        },
+        {
+          "name": "--border-color-hover",
+          "annotation": "prop",
+          "docs": "Border color of the textarea on hover"
+        },
+        {
+          "name": "--border-color-invalid",
+          "annotation": "prop",
+          "docs": "Border color of the textarea when invalid"
+        },
+        {
+          "name": "--border-color-invalid-hover",
+          "annotation": "prop",
+          "docs": "Border color of the textarea when invalid on focus"
+        },
+        {
+          "name": "--border-radius",
+          "annotation": "prop",
+          "docs": "Border radius of the textarea"
+        },
+        {
+          "name": "--color",
+          "annotation": "prop",
+          "docs": "Text color of the textarea"
+        },
+        {
+          "name": "--focus-ring",
+          "annotation": "prop",
+          "docs": "The focus ring style to use when the textarea receives focus, a `box-shadow` property."
+        },
+        {
+          "name": "--font-size",
+          "annotation": "prop",
+          "docs": "Font size of the textarea"
+        },
+        {
+          "name": "--font-weight",
+          "annotation": "prop",
+          "docs": "Font weight of the textarea"
+        },
+        {
+          "name": "--min-height",
+          "annotation": "prop",
+          "docs": "Minimum height of the textarea"
+        },
+        {
+          "name": "--padding-end",
+          "annotation": "prop",
+          "docs": "Right padding of the textarea (will be left padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--padding-start",
+          "annotation": "prop",
+          "docs": "Left padding of the textarea (will be right padding when we support right-to-left direction)"
+        },
+        {
+          "name": "--placeholder-color",
+          "annotation": "prop",
+          "docs": "Text color of the placeholder"
+        }
+      ],
+      "slots": [
+        {
+          "name": "help-text",
+          "docs": "Help text that describes how to use the textarea."
+        },
+        {
+          "name": "invalid-text",
+          "docs": "Invalid text tells a user how to fix the error. Alternatively, you can use the invalid-text prop."
+        },
+        {
+          "name": "label",
+          "docs": "The textarea's label. Alternatively, you can use the label prop."
+        }
+      ],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}

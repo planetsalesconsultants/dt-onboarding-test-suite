@@ -1,0 +1,5 @@
+/*!
+ * (C) PAQT.com B.V. https://paqt.com - MIT License
+ */
+const n=(n,t=[])=>{const e={};t.forEach((t=>{if(n.hasAttribute(t)){const i=n.getAttribute(t);if(i!==null){e[t]=n.getAttribute(t)}n.removeAttribute(t)}}));return e};const t=(n,t,e,i)=>{let o=n.querySelector("input.aux-input");if(!o){o=n.ownerDocument.createElement("input");o.type="hidden";o.classList.add("aux-input");n.appendChild(o)}o.disabled=i;o.name=t;o.value=e||""};const e=(n,t,e,i)=>{if(typeof window!=="undefined"){const o=window;const r=o&&o.Ionic&&o.Ionic.config;if(r){const o=r.get("_ael");if(o){return o(n,t,e,i)}else if(r._ael){return r._ael(n,t,e,i)}}}return n.addEventListener(t,e,i)};const i=(n,t,e,i)=>{if(typeof window!=="undefined"){const o=window;const r=o&&o.Ionic&&o.Ionic.config;if(r){const o=r.get("_rel");if(o){return o(n,t,e,i)}else if(r._rel){return r._rel(n,t,e,i)}}}return n.removeEventListener(t,e,i)};const o=(n,t)=>{const e=n._original||n;return{_original:n,emit:r(e.emit.bind(e),t)}};const r=(n,t=0)=>{let e;return(...i)=>{clearTimeout(e);e=setTimeout(n,t,...i)}};export{e as a,i as b,o as d,n as i,t as r};
+//# sourceMappingURL=p-e8692ba3.js.map
