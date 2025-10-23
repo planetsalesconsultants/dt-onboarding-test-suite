@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
   <div style="display: flex; align-items: center;">
-    <img id="logo" src="img/planet-p-icon-black.png"><h1>>Datatrans Onboarding Test Suite</h1>
+    <img id="logo" src="img/planet-p-icon-black.png"><h1>Datatrans Onboarding Test Suite</h1>
   </div>
   <p>This page allows you to test a new or changed Datatrans setup. Please fill in all the parameters and you will be redirected to the Datatrans payment page of that merchant. Depending on the setup, DCC and 3D Secure will be shown. On the results page, you'll see the status of the transactions and you can cancel the transaction if necessary. </p>
   <div id="testInput">

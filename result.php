@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
   <div style="display: flex; align-items: center;">
-    <img id="logo" src="img/planet-p-icon-black.png"><h1>>Datatrans Onboarding Test Suite - Result</h1>
+    <img id="logo" src="img/planet-p-icon-black.png"><h1>Datatrans Onboarding Test Suite - Result</h1>
   </div>
   <div id="result">
     <div class="table">
