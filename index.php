@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Datatrans Onboarding Test Suite/title>
+  <title>Datatrans Onboarding Test Suite</title>
   <link rel="stylesheet" href="css/graphite.bundle.css">
   <link rel="stylesheet" href="css/custom.css">
   <script type="module" src="dist/core/core.esm.js"></script>
