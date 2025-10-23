@@ -56,15 +56,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <div style="display: flex; align-items: center;">
-    <img id="logo" src="img/planet-p-icon-black.png"><h1>Datatrans Setup Test - Result Page</h1>
-  </div>
+  <title>>Datatrans Onboarding Test Suite - Result</title>
   <link rel="stylesheet" href="css/graphite.bundle.css">
   <script type="module" src="dist/core/core.esm.js"></script>
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-  <h1>Result Page</h1>
+  <div style="display: flex; align-items: center;">
+    <img id="logo" src="img/planet-p-icon-black.png"><h1>>Datatrans Onboarding Test Suite - Result</h1>
+  </div>
   <div id="result">
     <div class="table">
       <div class="row">
