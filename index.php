@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $apiKey = base64_encode($merchantid . ':' . $password);
                   
       // get the current path for the successUrl
-      $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+      $protocol = "https://";
       $host = $_SERVER['HTTP_HOST'];
       $path = rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . '/';
       $baseUrl = $protocol . $host . $path;
