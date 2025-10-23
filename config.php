@@ -1,7 +1,7 @@
 <?php
 // test tool configuration
-define ('PAGENAME_INPUT', '1-test-input.php');
-define ('PAGENAME_RESULT', '2-result.php');
+define ('PAGENAME_INPUT', 'index.php');
+define ('PAGENAME_RESULT', 'result.php');
 
 define ('TEST_DEBUG', true);    // sets the following values for easier testing in Sandbox
 define ('TEST_MERCHANTID', '1100017764');
