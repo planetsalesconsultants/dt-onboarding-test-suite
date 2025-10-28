@@ -1,7 +1,7 @@
 <?php
 ini_set('session.cookie_lifetime', 86400);
 session_start();
-include "config.php";
+include "/var/config/config.php";
 include "functions.php";
 
 $transactionId = $_SESSION['transactionId'];
